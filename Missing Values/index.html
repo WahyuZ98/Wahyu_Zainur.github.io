@@ -360,6 +360,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#contoh-datanya-sebagai-berikut" class="md-nav__link">
+    Contoh Datanya sebagai berikut
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -439,6 +446,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#contoh-datanya-sebagai-berikut" class="md-nav__link">
+    Contoh Datanya sebagai berikut
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -480,6 +494,7 @@
 <p>Di antara berbagai metrik jarak yang tersedia, kami akan fokus pada yang utama, Euclidean dan Manhattan. Euclidean adalah ukuran jarak yang baik untuk digunakan jika variabel input bertipe sama (mis. Semua lebar dan tinggi yang diukur). Jarak Manhattan adalah ukuran yang baik untuk digunakan jika variabel input tidak dalam jenis yang sama (seperti usia, tinggi, dll ...).</p>
 <h3 id="atribut-kategorikal-jarak">Atribut kategorikal jarak<a class="headerlink" href="#atribut-kategorikal-jarak" title="Permanent link">&para;</a></h3>
 <p>tanpa transformasi sebelumnya, jarak yang berlaku terkait dengan frekuensi dan kesamaan. Atribut kategorikal hampir sama dengan nominal karena dengan tipe ini akan dinormalisasikan menjadi numerik atau angka untuk bisa dirukur jaraknya.</p>
+<h3 id="contoh-datanya-sebagai-berikut">Contoh Datanya sebagai berikut<a class="headerlink" href="#contoh-datanya-sebagai-berikut" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">math</span> <span class="kn">as</span> <span class="nn">mt</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
@@ -8591,6 +8606,62 @@
                             <td id="T_953ed1e8_dacb_11e9_850d_04d3b0fe5c1crow2699_col0" class="data row2699 col0" >2700,"M",15000,"M",20,"PS",35000,1.38179,"Y"</td>
         </tr>
 </tbody></table>
+
+<div class="codehilite"><pre><span></span><span class="c1"># importing pandas as pd </span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
+
+<span class="c1"># importing numpy as np </span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> 
+
+<span class="c1"># dictionary of lists </span>
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;First Score&#39;</span><span class="p">:[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">85</span><span class="p">],</span> 
+        <span class="s1">&#39;Second Score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span> 
+        <span class="s1">&#39;Third Score&#39;</span><span class="p">:[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">78</span><span class="p">]}</span>
+
+<span class="c1"># creating a dataframe from dictionary </span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span> 
+
+<span class="c1"># filling missing value using fillna()   </span>
+<span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<table>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>First Score</th>
+      <th>Second Score</th>
+      <th>Third Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>90.0</td>
+      <td>70.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>70.0</td>
+      <td>65.0</td>
+      <td>70.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>86.0</td>
+      <td>90.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>85.0</td>
+      <td>0.0</td>
+      <td>78.0</td>
+    </tr>
+  </tbody>
+</table>
                 
                   
                 
