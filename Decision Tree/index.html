@@ -1,0 +1,1433 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Repository Untuk Tugas">
+      
+      
+        <link rel="canonical" href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/Decision Tree/">
+      
+      
+        <meta name="author" content="Wahyu Zainur Putra">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Decision Tree - (180411100128) Wahyu Zainur Putra</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#decision-tree-pohon-keputusan" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/" title="(180411100128) Wahyu Zainur Putra" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              (180411100128) Wahyu Zainur Putra
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Decision Tree
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wahyu Zainur Putra
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/" title="(180411100128) Wahyu Zainur Putra" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    (180411100128) Wahyu Zainur Putra
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wahyu Zainur Putra
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Halaman Profile" class="md-nav__link">
+      Halaman Profile
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../statistik deskriptif/" title="Statistik Deskriptif" class="md-nav__link">
+      Statistik Deskriptif
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Mengukur Jarak Data/" title="Mengukur Jarak Data" class="md-nav__link">
+      Mengukur Jarak Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Missing Values/" title="Missing Values" class="md-nav__link">
+      Missing Values
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Decision Tree
+      </label>
+    
+    <a href="./" title="Decision Tree" class="md-nav__link md-nav__link--active">
+      Decision Tree
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entropy" class="md-nav__link">
+    Entropy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definisi" class="md-nav__link">
+    Definisi:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-yang-entropi-lakukan" class="md-nav__link">
+    Apa yang Entropi lakukan?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mencari-entropy" class="md-nav__link">
+    Mencari Entropy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-equation-of-entropyrumus-entropy" class="md-nav__link">
+    The Equation of Entropy(Rumus Entropy):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-gain" class="md-nav__link">
+    Information Gain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apakah-yang-dimaksud-dengan-informasi-dan-mengapa-itu-penting-di-decision-tree" class="md-nav__link">
+    Apakah yang dimaksud dengan Informasi dan mengapa itu penting di Decision Tree?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-equation-of-information-gainrumus-information-gain" class="md-nav__link">
+    The Equation of Information gain(Rumus Information Gain):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-berikut-untuk-menghitung-entropygain-yang-ada-di-tiap-data-tersebut-menggunakan-hitugan-manual" class="md-nav__link">
+    Data Berikut untuk menghitung Entropy,Gain yang ada di tiap data tersebut menggunakan hitugan manual :
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pertama" class="md-nav__link">
+    Pertama
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-data-yang-telah-didapatkan-untuk-menghitung-entropygain-dengan-programsebagai-berikut" class="md-nav__link">
+    Contoh Data yang telah didapatkan untuk menghitung entropy,gain dengan program,sebagai berikut:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pertama_1" class="md-nav__link">
+    Pertama
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kedua" class="md-nav__link">
+    Kedua
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ketiga" class="md-nav__link">
+    Ketiga
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keempat" class="md-nav__link">
+    Keempat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entropy" class="md-nav__link">
+    Entropy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definisi" class="md-nav__link">
+    Definisi:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-yang-entropi-lakukan" class="md-nav__link">
+    Apa yang Entropi lakukan?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mencari-entropy" class="md-nav__link">
+    Mencari Entropy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-equation-of-entropyrumus-entropy" class="md-nav__link">
+    The Equation of Entropy(Rumus Entropy):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-gain" class="md-nav__link">
+    Information Gain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apakah-yang-dimaksud-dengan-informasi-dan-mengapa-itu-penting-di-decision-tree" class="md-nav__link">
+    Apakah yang dimaksud dengan Informasi dan mengapa itu penting di Decision Tree?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-equation-of-information-gainrumus-information-gain" class="md-nav__link">
+    The Equation of Information gain(Rumus Information Gain):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-berikut-untuk-menghitung-entropygain-yang-ada-di-tiap-data-tersebut-menggunakan-hitugan-manual" class="md-nav__link">
+    Data Berikut untuk menghitung Entropy,Gain yang ada di tiap data tersebut menggunakan hitugan manual :
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pertama" class="md-nav__link">
+    Pertama
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-data-yang-telah-didapatkan-untuk-menghitung-entropygain-dengan-programsebagai-berikut" class="md-nav__link">
+    Contoh Data yang telah didapatkan untuk menghitung entropy,gain dengan program,sebagai berikut:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pertama_1" class="md-nav__link">
+    Pertama
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kedua" class="md-nav__link">
+    Kedua
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ketiga" class="md-nav__link">
+    Ketiga
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keempat" class="md-nav__link">
+    Keempat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/edit/master/docs/Decision Tree.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="decision-tree-pohon-keputusan">Decision Tree (Pohon Keputusan)<a class="headerlink" href="#decision-tree-pohon-keputusan" title="Permanent link">&para;</a></h1>
+<h2 id="pengertian">Pengertian<a class="headerlink" href="#pengertian" title="Permanent link">&para;</a></h2>
+<p>Decision tree adalah salah satu metode klasifikasi yang paling populer, karena mudah untuk diinterpretasi oleh manusia. Decision tree adalah model prediksi menggunakan struktur pohon atau struktur berhirarki.</p>
+<p>Konsep dari pohon keputusan adalah mengubah data menjadi decision tree dan aturan-aturan keputusan. Manfaat utama dari penggunaan decision tree adalah kemampuannya untuk mem-break down proses pengambilan keputusan yang kompleks menjadi lebih simple, sehingga pengambil keputusan akan lebih menginterpretasikan solusi dari permasalahan.</p>
+<p>Decision tree membangun model klasifikasi atau regresi dalam bentuk struktur pohon. Ini memecah dataset menjadi himpunan bagian yang lebih kecil dan lebih kecil sementara pada saat yang sama pohon keputusan terkait dikembangkan secara bertahap. Hasil akhirnya adalah pohon dengan simpul keputusan dan simpul daun. Node keputusan (mis., Outlook) memiliki dua atau lebih cabang (mis., Sunny, Overcast, dan Rainy). Node daun (mis., Play) mewakili klasifikasi atau keputusan. Node keputusan teratas dalam pohon yang sesuai dengan prediktor terbaik disebut simpul akar. Pohon keputusan dapat menangani data kategorikal dan numerik.</p>
+<h2 id="entropy">Entropy<a class="headerlink" href="#entropy" title="Permanent link">&para;</a></h2>
+<h6 id="definisi">Definisi:<a class="headerlink" href="#definisi" title="Permanent link">&para;</a></h6>
+<p>Entropi adalah ukuran ketidakmurnian, gangguan, atau ketidakpastian dalam banyak contoh.</p>
+<h3 id="apa-yang-entropi-lakukan">Apa yang Entropi lakukan?<a class="headerlink" href="#apa-yang-entropi-lakukan" title="Permanent link">&para;</a></h3>
+<p>Entropy mengontrol bagaimana Decision Tree memutuskan untuk membagi data. Ini sebenarnya mempengaruhi bagaimana Pohon Keputusan menarik batas-batasnya</p>
+<h3 id="mencari-entropy">Mencari Entropy<a class="headerlink" href="#mencari-entropy" title="Permanent link">&para;</a></h3>
+<p>Untuk menghitung Information gain perlu dihitung dahulu nilai informasi dalam suatu bits dari suatu kumpulan obyek. Cara penghitungan dilakukan dengan menggunakan konsep entropi. Entropi menyatakan impurity suatu kumpulan obyek . Berikut merupakan definisi dari entropi suatu ruang sampel data (S),sebagai berikut</p>
+<h6 id="the-equation-of-entropyrumus-entropy"><strong>The Equation of Entropy(Rumus Entropy):</strong><a class="headerlink" href="#the-equation-of-entropyrumus-entropy" title="Permanent link">&para;</a></h6>
+<p>$$
+Entropy(S) = \sum_{i=1}^n {-P_i\log_2{P_i}}
+$$</p>
+<p>Keterangan :</p>
+<p>S = ruang sampel data yang di gunakaan untuk data pelatihan</p>
+<p>n = jumlah partisi</p>
+<p>Pi = Probability dari Pi terhadap P</p>
+<h2 id="information-gain">Information Gain<a class="headerlink" href="#information-gain" title="Permanent link">&para;</a></h2>
+<p>Information gain (IG) mengukur seberapa banyak "informasi" yang diberikan fitur kepada kita tentang kelas. </p>
+<p>– Fitur yang mempartisi dengan sempurna harus memberikan informasi yang maksimal. </p>
+<p>– Fitur-fitur yang tidak terkait tidak boleh memberikan informasi. </p>
+<p>• Ini mengukur pengurangan entropi. </p>
+<ul>
+<li>Entropi: (im) kemurnian dalam koleksi contoh yang sewenang-wenang.</li>
+</ul>
+<h3 id="apakah-yang-dimaksud-dengan-informasi-dan-mengapa-itu-penting-di-decision-tree">Apakah yang dimaksud dengan Informasi dan mengapa itu penting di Decision Tree?<a class="headerlink" href="#apakah-yang-dimaksud-dengan-informasi-dan-mengapa-itu-penting-di-decision-tree" title="Permanent link">&para;</a></h3>
+<p>Definisi: Perolehan informasi (IG) mengukur seberapa banyak "informasi" yang diberikan fitur kepada kita tentang kelas.
+Kenapa itu penting?
+Perolehan informasi adalah kunci utama yang digunakan oleh Algoritma Decision Tree untuk membangun Decision Tree.
+Algoritma Decision Trees akan selalu berusaha memaksimalkan perolehan Informasi.
+Atribut dengan perolehan Informasi tertinggi akan diuji / dipisah terlebih dahulu.</p>
+<h6 id="the-equation-of-information-gainrumus-information-gain"><strong>The Equation of Information gain(Rumus Information Gain):</strong><a class="headerlink" href="#the-equation-of-information-gainrumus-information-gain" title="Permanent link">&para;</a></h6>
+<p>$$
+Gain(S,A) = entropy(S)-\sum_{i=1}^n \frac{|s_i|}{|s|}\quad x \quad entropy(S_i)
+$$</p>
+<p>Keterangan :</p>
+<p>T = ruang sampel data yang di gunakaan untuk data pelatihan</p>
+<p>n = jumlah partisi</p>
+<p>Si = Probability dari Si terhadap S</p>
+<h4 id="data-berikut-untuk-menghitung-entropygain-yang-ada-di-tiap-data-tersebut-menggunakan-hitugan-manual">Data Berikut untuk menghitung Entropy,Gain yang ada di tiap data tersebut menggunakan hitugan manual :<a class="headerlink" href="#data-berikut-untuk-menghitung-entropygain-yang-ada-di-tiap-data-tersebut-menggunakan-hitugan-manual" title="Permanent link">&para;</a></h4>
+<table id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1c" ><thead>    <tr>        <th class="col_heading level0 col0" >Customer ID</th>        <th class="col_heading level0 col1" >Gender</th>        <th class="col_heading level0 col2" >Car Type</th>        <th class="col_heading level0 col3" >Shirt Size</th>        <th class="col_heading level0 col4" >Class</th>    </tr></thead><tbody>            <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col0" class="data row0 col0" >1</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col1" class="data row0 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col2" class="data row0 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col3" class="data row0 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col4" class="data row0 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col0" class="data row1 col0" >2</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col1" class="data row1 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col2" class="data row1 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col3" class="data row1 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col4" class="data row1 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col0" class="data row2 col0" >3</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col1" class="data row2 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col2" class="data row2 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col3" class="data row2 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col4" class="data row2 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col0" class="data row3 col0" >4</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col1" class="data row3 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col2" class="data row3 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col3" class="data row3 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col4" class="data row3 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col0" class="data row4 col0" >5</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col1" class="data row4 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col2" class="data row4 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col3" class="data row4 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col4" class="data row4 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col0" class="data row5 col0" >6</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col1" class="data row5 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col2" class="data row5 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col3" class="data row5 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col4" class="data row5 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col0" class="data row6 col0" >7</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col1" class="data row6 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col2" class="data row6 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col3" class="data row6 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col4" class="data row6 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col0" class="data row7 col0" >8</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col1" class="data row7 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col2" class="data row7 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col3" class="data row7 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col4" class="data row7 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col0" class="data row8 col0" >9</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col1" class="data row8 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col2" class="data row8 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col3" class="data row8 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col4" class="data row8 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col0" class="data row9 col0" >10</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col1" class="data row9 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col2" class="data row9 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col3" class="data row9 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col4" class="data row9 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col0" class="data row10 col0" >11</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col1" class="data row10 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col2" class="data row10 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col3" class="data row10 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col4" class="data row10 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col0" class="data row11 col0" >12</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col1" class="data row11 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col2" class="data row11 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col3" class="data row11 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col4" class="data row11 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col0" class="data row12 col0" >13</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col1" class="data row12 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col2" class="data row12 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col3" class="data row12 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col4" class="data row12 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col0" class="data row13 col0" >14</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col1" class="data row13 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col2" class="data row13 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col3" class="data row13 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col4" class="data row13 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col0" class="data row14 col0" >15</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col1" class="data row14 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col2" class="data row14 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col3" class="data row14 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col4" class="data row14 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col0" class="data row15 col0" >16</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col1" class="data row15 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col2" class="data row15 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col3" class="data row15 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col4" class="data row15 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col0" class="data row16 col0" >17</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col1" class="data row16 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col2" class="data row16 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col3" class="data row16 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col4" class="data row16 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col0" class="data row17 col0" >18</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col1" class="data row17 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col2" class="data row17 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col3" class="data row17 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col4" class="data row17 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col0" class="data row18 col0" >19</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col1" class="data row18 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col2" class="data row18 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col3" class="data row18 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col4" class="data row18 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col0" class="data row19 col0" >20</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col1" class="data row19 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col2" class="data row19 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col3" class="data row19 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col4" class="data row19 col4" >C1</td>
+        </tr>
+</tbody></table>
+
+<h6 id="pertama">Pertama<a class="headerlink" href="#pertama" title="Permanent link">&para;</a></h6>
+<p>Kita harus menghitung Entropy terlebih dahulu dengan menggunakan rumus $Entropy(S)$</p>
+<p>$P_i = C0 = , P(C0)=P_1 = \frac{10}{20}$</p>
+<p>$P_i = C0 = , P(C1)=P_2 = \frac{10}{20}$
+$$
+Entropy(S) = {-\frac{10}{20}\log_2{\frac{10}{20}}}{-\frac{10}{20}\log_2{\frac{10}{20}}}= 1
+$$
+Sudah dicari Entropynya = 1 maka selanjutnya mencari tiap Gainnya</p>
+<p>Gain  dari Gender dari tiap Value,berikut Rumus untuk menghitung entropy dari tiap value </p>
+<p>Gain dari CarType dari tiap Value,berikut Rumus untuk menghitung entropy dari tiap value</p>
+<p>Gain dari Shirt Size dari tiap Value,berikut Rumus untuk menghitung entropy dari tiap value
+$$
+Entropy(Male) = {-\frac{6}{10}\log_2{\frac{6}{10}}}{-\frac{4}{10}\log_2{\frac{4}{10}}}=0,97051
+$$</p>
+<p>$$
+Entropy(Female) = {-\frac{4}{10}\log_2{\frac{4}{10}}}{-\frac{6}{10}\log_2{\frac{6}{10}}}=0,97051
+$$</p>
+<p>$$
+Gain(S,Gender) = 1-(\frac{10}{20}X({-\frac{6}{10}\log_2{\frac{6}{10}}}{-\frac{4}{10}\log_2{\frac{4}{10}}})+\frac{10}{20}X({-\frac{4}{10}\log_2{\frac{4}{10}}}{-\frac{6}{10}\log_2{\frac{6}{10}}}) = 0,029049
+$$</p>
+<p>$$
+Entropy(Family) = {-\frac{1}{4}\log_2{\frac{1}{4}}}{-\frac{3}{4}\log_2{\frac{3}{4}}}=0,81128
+$$</p>
+<p>$$
+Entropy(Sports) = {-\frac{8}{8}\log_2{\frac{8}{8}}}{-\frac{0}{8}\log_2{\frac{0}{8}}}=0
+$$</p>
+<p>$$
+Entropy(Sports) = {-\frac{1}{8}\log_2{\frac{1}{8}}}{-\frac{7}{8}\log_2{\frac{7}{8}}}=0,54356
+$$</p>
+<p>$$
+Gain(S,CarType) = 1-(\frac{4}{20}X({-\frac{1}{4}\log_2{\frac{1}{4}}}{-\frac{3}{4}\log_2{\frac{3}{4}}})+\frac{8}{20}X({-\frac{8}{8}\log_2{\frac{8}{8}}}{-\frac{0}{8}\log_2{\frac{0}{8}}}+\frac{8}{20}X({-\frac{1}{8}\log_2{\frac{1}{8}}}{-\frac{7}{8}\log_2{\frac{7}{8}}}) = 0,62032
+$$</p>
+<p>$$
+Entropy(Small) = {-\frac{3}{5}\log_2{\frac{3}{5}}}{-\frac{2}{5}\log_2{\frac{2}{5}}}=0,97095
+$$</p>
+<p>$$
+Entropy(Medium) = {-\frac{3}{7}\log_2{\frac{3}{7}}}{-\frac{4}{7}\log_2{\frac{4}{7}}}=0,98523
+$$</p>
+<p>$$
+Entropy(Large) = {-\frac{2}{4}\log_2{\frac{2}{4}}}{-\frac{2}{4}\log_2{\frac{2}{4}}}=1
+$$</p>
+<p>$$
+Entropy(ExtraLarge) = {-\frac{2}{4}\log_2{\frac{2}{4}}}{-\frac{2}{4}\log_2{\frac{2}{4}}}=1
+$$</p>
+<p>$$
+Gain(S,ShirtSize) = 1-(\frac{5}{20}X({-\frac{3}{5}\log_2{\frac{3}{5}}}{-\frac{2}{5}\log_2{\frac{2}{5}}})+\frac{7}{20}X({-\frac{3}{7}\log_2{\frac{3}{7}}}{-\frac{4}{7}\log_2{\frac{4}{7}}}+\frac{4}{20}X({-\frac{2}{4}\log_2{\frac{2}{4}}}{-\frac{2}{4}\log_2{\frac{2}{4}}}+\frac{4}{20}X({-\frac{2}{4}\log_2{\frac{2}{4}}}{-\frac{2}{4}\log_2{\frac{2}{4}}}) = 0,012433
+$$</p>
+<p>Berikut Hasil dari Decision Tree yang telah dibuat:</p>
+<div class="codehilite"><pre><span></span>https://raw.githubusercontent.com/WahyuZ98/Wahyu_Zainur.github.io/master/node33.jpg
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;node33.jpg&quot;</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p><img src="node33.jpg"></p>
+<p>https://github.com/WahyuZ98/Wahyu_Zainur.github.io/blob/master/node33.jpg?raw=true</p>
+<p><img alt="node33" src="E:\Tes mkdocs\Baru\site\Decision Tree\node33.jpg" /></p>
+<h4 id="contoh-data-yang-telah-didapatkan-untuk-menghitung-entropygain-dengan-programsebagai-berikut">Contoh Data yang telah didapatkan untuk menghitung entropy,gain dengan program,sebagai berikut:<a class="headerlink" href="#contoh-data-yang-telah-didapatkan-untuk-menghitung-entropygain-dengan-programsebagai-berikut" title="Permanent link">&para;</a></h4>
+<h5 id="pertama_1">Pertama<a class="headerlink" href="#pertama_1" title="Permanent link">&para;</a></h5>
+<p>Kita harus mengimport/memasukkan data dengan meng-coding program tersebut dengan menggunakan bahasa pemrograman python (jupyter notebook)</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;data_informationgain.xlsx&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide_index</span><span class="p">()</span>
+</pre></div>
+
+
+<table id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1c" ><thead>    <tr>        <th class="col_heading level0 col0" >Customer ID</th>        <th class="col_heading level0 col1" >Gender</th>        <th class="col_heading level0 col2" >Car Type</th>        <th class="col_heading level0 col3" >Shirt Size</th>        <th class="col_heading level0 col4" >Class</th>    </tr></thead><tbody>            <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col0" class="data row0 col0" >1</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col1" class="data row0 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col2" class="data row0 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col3" class="data row0 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow0_col4" class="data row0 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col0" class="data row1 col0" >2</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col1" class="data row1 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col2" class="data row1 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col3" class="data row1 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow1_col4" class="data row1 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col0" class="data row2 col0" >3</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col1" class="data row2 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col2" class="data row2 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col3" class="data row2 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow2_col4" class="data row2 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col0" class="data row3 col0" >4</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col1" class="data row3 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col2" class="data row3 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col3" class="data row3 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow3_col4" class="data row3 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col0" class="data row4 col0" >5</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col1" class="data row4 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col2" class="data row4 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col3" class="data row4 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow4_col4" class="data row4 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col0" class="data row5 col0" >6</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col1" class="data row5 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col2" class="data row5 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col3" class="data row5 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow5_col4" class="data row5 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col0" class="data row6 col0" >7</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col1" class="data row6 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col2" class="data row6 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col3" class="data row6 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow6_col4" class="data row6 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col0" class="data row7 col0" >8</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col1" class="data row7 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col2" class="data row7 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col3" class="data row7 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow7_col4" class="data row7 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col0" class="data row8 col0" >9</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col1" class="data row8 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col2" class="data row8 col2" >Sports</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col3" class="data row8 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow8_col4" class="data row8 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col0" class="data row9 col0" >10</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col1" class="data row9 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col2" class="data row9 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col3" class="data row9 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow9_col4" class="data row9 col4" >C0</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col0" class="data row10 col0" >11</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col1" class="data row10 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col2" class="data row10 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col3" class="data row10 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow10_col4" class="data row10 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col0" class="data row11 col0" >12</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col1" class="data row11 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col2" class="data row11 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col3" class="data row11 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow11_col4" class="data row11 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col0" class="data row12 col0" >13</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col1" class="data row12 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col2" class="data row12 col2" >Family</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col3" class="data row12 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow12_col4" class="data row12 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col0" class="data row13 col0" >14</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col1" class="data row13 col1" >M</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col2" class="data row13 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col3" class="data row13 col3" >Extra Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow13_col4" class="data row13 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col0" class="data row14 col0" >15</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col1" class="data row14 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col2" class="data row14 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col3" class="data row14 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow14_col4" class="data row14 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col0" class="data row15 col0" >16</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col1" class="data row15 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col2" class="data row15 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col3" class="data row15 col3" >Small</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow15_col4" class="data row15 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col0" class="data row16 col0" >17</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col1" class="data row16 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col2" class="data row16 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col3" class="data row16 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow16_col4" class="data row16 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col0" class="data row17 col0" >18</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col1" class="data row17 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col2" class="data row17 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col3" class="data row17 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow17_col4" class="data row17 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col0" class="data row18 col0" >19</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col1" class="data row18 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col2" class="data row18 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col3" class="data row18 col3" >Medium</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow18_col4" class="data row18 col4" >C1</td>
+        </tr>
+        <tr>
+                            <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col0" class="data row19 col0" >20</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col1" class="data row19 col1" >F</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col2" class="data row19 col2" >Luxury</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col3" class="data row19 col3" >Large</td>
+                    <td id="T_d6573ea4_e58c_11e9_83e7_04d3b0fe5c1crow19_col4" class="data row19 col4" >C1</td>
+        </tr>
+</tbody></table>
+
+<h5 id="kedua">Kedua<a class="headerlink" href="#kedua" title="Permanent link">&para;</a></h5>
+<p>Merubah label / kolom yang ada di data diatas untuk bisa dihitung dengan menggunakan code python,yaitu untuk memudahkan pengguna agar bisa menghitung code yang nanti akan digunakan . Pada gender hanya menggunakan biner (0,1){F,M}. Pada cartype menggunakan inisialisasi angka urutan (0,1,2){Familiy,Luxury,Sports} . Pada Shirt Size menggunakan inisialisasi angka urutan (0,1,2,3){Small,Medium,Large,ExtraLarge}.Berikut codenya</p>
+<div class="codehilite"><pre><span></span><span class="n">lab</span><span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;gender_n&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gender&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;car_type_n&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Car Type&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;shirt_size_n&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Shirt Size&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;class_n&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide_index</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Berikut Tampilan yang telah di inisialisasi menjadi angka</p>
+<table id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1c" ><thead>    <tr>        <th class="col_heading level0 col0" >Customer ID</th>        <th class="col_heading level0 col1" >Gender</th>        <th class="col_heading level0 col2" >Car Type</th>        <th class="col_heading level0 col3" >Shirt Size</th>        <th class="col_heading level0 col4" >Class</th>        <th class="col_heading level0 col5" >gender_n</th>        <th class="col_heading level0 col6" >car_type_n</th>        <th class="col_heading level0 col7" >shirt_size_n</th>        <th class="col_heading level0 col8" >class_n</th>    </tr></thead><tbody>            <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col0" class="data row0 col0" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col1" class="data row0 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col2" class="data row0 col2" >Family</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col3" class="data row0 col3" >Small</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col4" class="data row0 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col5" class="data row0 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col6" class="data row0 col6" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col7" class="data row0 col7" >3</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow0_col8" class="data row0 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col0" class="data row1 col0" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col1" class="data row1 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col2" class="data row1 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col3" class="data row1 col3" >Medium</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col4" class="data row1 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col5" class="data row1 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col6" class="data row1 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col7" class="data row1 col7" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow1_col8" class="data row1 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col0" class="data row2 col0" >3</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col1" class="data row2 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col2" class="data row2 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col3" class="data row2 col3" >Medium</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col4" class="data row2 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col5" class="data row2 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col6" class="data row2 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col7" class="data row2 col7" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow2_col8" class="data row2 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col0" class="data row3 col0" >4</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col1" class="data row3 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col2" class="data row3 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col3" class="data row3 col3" >Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col4" class="data row3 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col5" class="data row3 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col6" class="data row3 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col7" class="data row3 col7" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow3_col8" class="data row3 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col0" class="data row4 col0" >5</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col1" class="data row4 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col2" class="data row4 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col3" class="data row4 col3" >Extra Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col4" class="data row4 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col5" class="data row4 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col6" class="data row4 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col7" class="data row4 col7" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow4_col8" class="data row4 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col0" class="data row5 col0" >6</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col1" class="data row5 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col2" class="data row5 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col3" class="data row5 col3" >Extra Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col4" class="data row5 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col5" class="data row5 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col6" class="data row5 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col7" class="data row5 col7" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow5_col8" class="data row5 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col0" class="data row6 col0" >7</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col1" class="data row6 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col2" class="data row6 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col3" class="data row6 col3" >Small</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col4" class="data row6 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col5" class="data row6 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col6" class="data row6 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col7" class="data row6 col7" >3</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow6_col8" class="data row6 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col0" class="data row7 col0" >8</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col1" class="data row7 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col2" class="data row7 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col3" class="data row7 col3" >Small</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col4" class="data row7 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col5" class="data row7 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col6" class="data row7 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col7" class="data row7 col7" >3</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow7_col8" class="data row7 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col0" class="data row8 col0" >9</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col1" class="data row8 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col2" class="data row8 col2" >Sports</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col3" class="data row8 col3" >Medium</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col4" class="data row8 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col5" class="data row8 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col6" class="data row8 col6" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col7" class="data row8 col7" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow8_col8" class="data row8 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col0" class="data row9 col0" >10</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col1" class="data row9 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col2" class="data row9 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col3" class="data row9 col3" >Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col4" class="data row9 col4" >C0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col5" class="data row9 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col6" class="data row9 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col7" class="data row9 col7" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow9_col8" class="data row9 col8" >0</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col0" class="data row10 col0" >11</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col1" class="data row10 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col2" class="data row10 col2" >Family</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col3" class="data row10 col3" >Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col4" class="data row10 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col5" class="data row10 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col6" class="data row10 col6" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col7" class="data row10 col7" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow10_col8" class="data row10 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col0" class="data row11 col0" >12</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col1" class="data row11 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col2" class="data row11 col2" >Family</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col3" class="data row11 col3" >Extra Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col4" class="data row11 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col5" class="data row11 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col6" class="data row11 col6" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col7" class="data row11 col7" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow11_col8" class="data row11 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col0" class="data row12 col0" >13</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col1" class="data row12 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col2" class="data row12 col2" >Family</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col3" class="data row12 col3" >Medium</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col4" class="data row12 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col5" class="data row12 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col6" class="data row12 col6" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col7" class="data row12 col7" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow12_col8" class="data row12 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col0" class="data row13 col0" >14</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col1" class="data row13 col1" >M</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col2" class="data row13 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col3" class="data row13 col3" >Extra Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col4" class="data row13 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col5" class="data row13 col5" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col6" class="data row13 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col7" class="data row13 col7" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow13_col8" class="data row13 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col0" class="data row14 col0" >15</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col1" class="data row14 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col2" class="data row14 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col3" class="data row14 col3" >Small</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col4" class="data row14 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col5" class="data row14 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col6" class="data row14 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col7" class="data row14 col7" >3</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow14_col8" class="data row14 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col0" class="data row15 col0" >16</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col1" class="data row15 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col2" class="data row15 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col3" class="data row15 col3" >Small</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col4" class="data row15 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col5" class="data row15 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col6" class="data row15 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col7" class="data row15 col7" >3</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow15_col8" class="data row15 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col0" class="data row16 col0" >17</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col1" class="data row16 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col2" class="data row16 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col3" class="data row16 col3" >Medium</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col4" class="data row16 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col5" class="data row16 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col6" class="data row16 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col7" class="data row16 col7" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow16_col8" class="data row16 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col0" class="data row17 col0" >18</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col1" class="data row17 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col2" class="data row17 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col3" class="data row17 col3" >Medium</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col4" class="data row17 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col5" class="data row17 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col6" class="data row17 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col7" class="data row17 col7" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow17_col8" class="data row17 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col0" class="data row18 col0" >19</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col1" class="data row18 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col2" class="data row18 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col3" class="data row18 col3" >Medium</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col4" class="data row18 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col5" class="data row18 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col6" class="data row18 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col7" class="data row18 col7" >2</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow18_col8" class="data row18 col8" >1</td>
+        </tr>
+        <tr>
+                            <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col0" class="data row19 col0" >20</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col1" class="data row19 col1" >F</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col2" class="data row19 col2" >Luxury</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col3" class="data row19 col3" >Large</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col4" class="data row19 col4" >C1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col5" class="data row19 col5" >0</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col6" class="data row19 col6" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col7" class="data row19 col7" >1</td>
+                    <td id="T_d65b3688_e58c_11e9_a69e_04d3b0fe5c1crow19_col8" class="data row19 col8" >1</td>
+        </tr>
+</tbody></table>
+
+<h5 id="ketiga">Ketiga<a class="headerlink" href="#ketiga" title="Permanent link">&para;</a></h5>
+<p>Setelah merubah label menjadi inisialisasi angka (numerik) melanjutkan ke code berikutnya untuk bisa dihitung dan code berikut untuk penghapusan fitur /label yang tidak diperlukan</p>
+<div class="codehilite"><pre><span></span><span class="n">inputs</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">,</span><span class="s2">&quot;Gender&quot;</span><span class="p">,</span><span class="s2">&quot;Car Type&quot;</span><span class="p">,</span><span class="s2">&quot;Shirt Size&quot;</span><span class="p">,</span> <span class="s2">&quot;Class&quot;</span><span class="p">,</span><span class="s2">&quot;class_n&quot;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">)</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;class_n&quot;</span><span class="p">]</span>
+</pre></div>
+
+
+<h5 id="keempat">Keempat<a class="headerlink" href="#keempat" title="Permanent link">&para;</a></h5>
+<p>Membuat Klasifikasi fitur untuk bisa dibuat Pohon Keputusan (Decision Tree)untuk bisa di classifier .</p>
+<div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;entropy&quot;</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="n">target</span><span class="p">)</span>
+</pre></div>
+
+
+<p>DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=None,
+                       max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort=False,
+                       random_state=100, splitter='best')</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="n">target</span><span class="p">),</span> <span class="n">max_depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">feature_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">,</span><span class="s2">&quot;Gender&quot;</span><span class="p">,</span><span class="s2">&quot;Car Type&quot;</span><span class="p">,</span><span class="s2">&quot;Shirt Size&quot;</span><span class="p">],</span><span class="n">class_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;C0&quot;</span><span class="p">,</span><span class="s2">&quot;C1&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">filled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">impurity</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">node_ids</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">proportion</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rotate</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Text(167.4, 195.696, 'node #0\nGender &lt;= 1.5\nentropy = 1.0\nsamples = 100.0%\nvalue = [0.5, 0.5]\nclass = C0'),
+ Text(125.55000000000001, 152.208, 'node #1\nCar Type &lt;= 0.5\nentropy = 0.65\nsamples = 60.0%\nvalue = [0.167, 0.833]\nclass = C1'),
+ Text(83.7, 108.72, 'node #2\nentropy = 0.0\nsamples = 10.0%\nvalue = [0.0, 1.0]\nclass = C1'),
+ Text(167.4, 108.72, 'node #3\nGender &lt;= 0.5\nentropy = 0.722\nsamples = 50.0%\nvalue = [0.2, 0.8]\nclass = C1'),
+ Text(83.7, 65.232, 'node #4\nCar Type &lt;= 2.5\nentropy = 0.918\nsamples = 15.0%\nvalue = [0.333, 0.667]\nclass = C1'),
+ Text(41.85, 21.744, 'node #5\nentropy = 0.0\nsamples = 10.0%\nvalue = [0.0, 1.0]\nclass = C1'),
+ Text(125.55000000000001, 21.744, 'node #6\nentropy = 0.0\nsamples = 5.0%\nvalue = [1.0, 0.0]\nclass = C0'),
+ Text(251.10000000000002, 65.232, 'node #7\nCar Type &lt;= 1.5\nentropy = 0.592\nsamples = 35.0%\nvalue = [0.143, 0.857]\nclass = C1'),
+ Text(209.25, 21.744, 'node #8\nentropy = 1.0\nsamples = 10.0%\nvalue = [0.5, 0.5]\nclass = C0'),
+ Text(292.95, 21.744, 'node #9\nentropy = 0.0\nsamples = 25.0%\nvalue = [0.0, 1.0]\nclass = C1'),
+ Text(209.25, 152.208, 'node #10\nentropy = 0.0\nsamples = 40.0%\nvalue = [1.0, 0.0]\nclass = C0')]</p>
+<p><img alt="decisiontree" src="E:\decisiontree.png" /></p>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$'],['$','$']]}
+});
+</script>
+
+<p><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Missing Values/" title="Missing Values" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Missing Values
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Wahyu Zainur Putra
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Wahyu_Zainur" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/Wahyu_Zainur" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
