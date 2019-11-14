@@ -541,8 +541,8 @@
 <h2 id="pengertian">Pengertian<a class="headerlink" href="#pengertian" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Fuzzy Clustering adalah proses menentukan derajat keanggotaan, dan kemudian menggunakannya dengan memasukkannya kedalam elemen satu kelompok cluster atau lebih.</p>
-<p>Fuzzy C-Means  (FCM) adalah suatu teknik pengelompokan data yang  keberadaan  tiap-tiap data dalam suatu kelompok ditentukan oleh nilai  atau derajat keanggotaan tertentu dan teknik ini pertama kali diperkenalkan oleh Jim Bezdek pada tahun 1981. Fuzzy C-Means menerapkan pengelompokan fuzzy, dimana setiap data dapat menjadi anggota dari beberapa cluster dengan derajat keanggotaan yang berbeda-beda pada setiap cluster. Fuzzy C-Means merupakan algoritma iteratif, yang menerapkan iterasi pada proses clustering data. Tujuan dari Fuzzy C-Means adalah untuk mendapatkan pusat cluster yang nantinya akan digunakan untuk mengetahui data yang masuk ke dalam sebuah cluster.</p>
 </blockquote>
+<p>Fuzzy C-Means  (FCM) adalah suatu teknik pengelompokan data yang  keberadaan  tiap-tiap data dalam suatu kelompok ditentukan oleh nilai  atau derajat keanggotaan tertentu dan teknik ini pertama kali diperkenalkan oleh Jim Bezdek pada tahun 1981. Fuzzy C-Means menerapkan pengelompokan fuzzy, dimana setiap data dapat menjadi anggota dari beberapa cluster dengan derajat keanggotaan yang berbeda-beda pada setiap cluster. Fuzzy C-Means merupakan algoritma iteratif, yang menerapkan iterasi pada proses clustering data. Tujuan dari Fuzzy C-Means adalah untuk mendapatkan pusat cluster yang nantinya akan digunakan untuk mengetahui data yang masuk ke dalam sebuah cluster.</p>
 <h2 id="teori-fuzzy-c-means">Teori Fuzzy C-Means<a class="headerlink" href="#teori-fuzzy-c-means" title="Permanent link">&para;</a></h2>
 <p>Dalam teori fuzzy, keanggotaan sebuah data tidak diberikan nilai secara tegas dengan nilai 1(menjadi anggota) dan nilai 0 (tidak menjadi anggota), melaikan dengan suatu nilai derajat keanggotaannya yang jangkauan nilainya 0 sampai 1. Nilai keanggotaan suatu data dalam sebuah himpunan menjadi 0 ketika sama sekali tidak menjadi anggota dan menjadi 1 ketika menjadi anggota secara penuh dalam suatu himpunan.Umumnya nilai keanggotaannya antara 0 sampai 1. semakin tinggi nilai keanggotaanya semakin tinggi derajat keanggotaanya dan semakin kecil maka semakin rendah derajat keanggotaanya. Kaitannya dengan K-means sebenarnya FCM merupakan versi fuzzy dan k-meansdengan beberapa modifikasi yang membedakan dengen K-Means.</p>
 <p>Konsep dari Fuzzy C-Means pertama kali adalah menentukan pusat cluster, yang akan menandai lokasi rata-rata untuk tiap-tiap cluster. Pada kondisi awal, pusat cluster ini masih belum akurat. Tiap-tiap titik data memiliki derajat keanggotaan untuk tiap-tiap cluster. Dengan cara memperbaiki pusat cluster dan derajat keanggotaan tiap-tiap titik data secara berulang, maka akan dapat dilihat bahwa pusat cluster akan bergerak menuju lokasi yang tepat. Perulangan ini didasarkan pada minimasi fungsi obyektif yang menggambarkan jarak dari titik data yang diberikan kepusat  cluster  yang terbobot oleh derajat keanggotaan titik data tersebut. Output dari Fuzzy C-Means merupakan deretan usat cluster dan beberapa derajat keanggotaan untuk tiap-tiap titik data. Informasi ini dapat digunakan untuk membangun suatu fuzzy inference system. Kelebihan dari metode fuzzy C-means adalah sederhana, mudah diimplementasikan, memiliki kemampuan untuk mengelompokkan data yang besar, dan Running timenya linear O( linear O(NCT)</p>
@@ -570,7 +570,20 @@ m adalah fuzzifier.</p>
 <p><img alt="" src="../fuzzy5.JPG" /></p>
 <h3 id="implementasi-fuzzy-c-means-clustering-dengan-excel">Implementasi Fuzzy C-Means Clustering Dengan Excel<a class="headerlink" href="#implementasi-fuzzy-c-means-clustering-dengan-excel" title="Permanent link">&para;</a></h3>
 <p>Dengan menggunakan Excel</p>
-<p>https://docs.google.com/spreadsheets/d/e/2PACX-1vRNAimNvR40bCtQV9CmfF38oO-gb_JyJEBlygo_02GFR-ZZu_X6svd5QXlhM_CIPQ/pub?gid=469314514&amp;single=true&amp;output=csv</p>
+<p>1) Dengan menentukan Jumlah Cluster serta pembobot (sebagai m) yang digunakan . Pada Contoh di bawah ini menggunakan 3 cluster dan 2 pembobot</p>
+<p><img alt="" src="../fuzzy_c_means(manual).png" /></p>
+<p>2) Pada Keanggotaan Cluster secara random. 3 Cluster tersebut melakukan normalisasi dan ketika dijumlah ketiga cluster akan berjumlah = 1.</p>
+<p>3) Menentukan MiuKuadrat, yaitu dengan meng-kuadrat kan semua clustering,tergantung pada bobot yang digunakan. Berikut pada contoh di bawah ini. Pada Miu Kuadrat ialah Meng pangkatkan 2 Cluster pada Cluster 1 fitur ke 1,Cluster 2 fitur ke 2 dan Cluster 3 fitur ke 3. Dan didapatkanlah semua total Miu Kuadrat</p>
+<p><img alt="" src="../fuzzy_c_means(manual)2.png" /></p>
+<p>4) Menentukan Miu Kudrat X1,X2, dan X3 dengan cara. Dengan menng-kalikan Fitur Parameter Hotel Bintang dan Kamar dengan Miu Kuadrat pada Fitur ke 1. pada Fitur ke 1 0,09 dikali dengan Fitur Parameter dengan baris Huruf A 0,09x1=0,09 dan 0,09x3=0,27. Terus berlanjut ke Miu Kuadrat selanjutnya</p>
+<p><img alt="" src="../fuzzy_c_means(manual)3.png" /></p>
+<p>5) Menentukan Pusat cluser dengan cara membagi Total Miu Kuadrat X yang di dapat Pada Total Miu Kuadrat X1 dibagi dengan Total Miu Kuadrat pada fitur ke 1. Berikut contohnya</p>
+<p><img alt="" src="../fuzzy_c_means(manual)4.png" /></p>
+<p>Berikut File Excel yang bisa di download untuk metode Fuzzy C-Means secara Manual di Excel</p>
+<div class="codehilite"><pre><span></span><span class="err">https://docs.google.com/spreadsheets/d/e/2PACX-1vRNAimNvR40bCtQV9CmfF38oO-gb_JyJEBlygo_02GFR-ZZu_X6svd5QXlhM_CIPQ/pub?gid=469314514&amp;single=true&amp;output=csv</span>
+</pre></div>
+
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTLXA5I-12piG_tIjPqQmyK_CRcNkN7l2Os-mMkLSTE8Sonz4VtHccIJiCqTtlzBg/pubhtml?widget=true&amp;headers=false"></iframe>
 
 <h3 id="implementasi-fuzzy-c-means-dengan-code-python">Implementasi Fuzzy C-Means dengan Code Python<a class="headerlink" href="#implementasi-fuzzy-c-means-dengan-code-python" title="Permanent link">&para;</a></h3>
@@ -582,18 +595,18 @@ m adalah fuzzifier.</p>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;Brown&#39;</span><span class="p">,</span> <span class="s1">&#39;ForestGreen&#39;</span><span class="p">]</span>
 
-<span class="c1"># Define three cluster centers</span>
+<span class="c1"># Mendefinisikan 3 cluster center</span>
 <span class="n">centers</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
            <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
            <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
 
-<span class="c1"># Define three cluster sigmas in x and y, respectively</span>
+
 <span class="n">sigmas</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span>
           <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
           <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">]]</span>
 
-<span class="c1"># Generate test data</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># Set seed for reproducibility</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>  
 <span class="n">xpts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">ypts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -602,7 +615,7 @@ m adalah fuzzifier.</p>
     <span class="n">ypts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">ypts</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="o">*</span> <span class="n">ysigma</span> <span class="o">+</span> <span class="n">ymu</span><span class="p">))</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">labels</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="o">*</span> <span class="n">i</span><span class="p">))</span>
 
-<span class="c1"># Visualize the test data</span>
+
 <span class="n">fig0</span><span class="p">,</span> <span class="n">ax0</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">ax0</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xpts</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">label</span><span class="p">],</span> <span class="n">ypts</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">label</span><span class="p">],</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span>
@@ -623,16 +636,16 @@ m adalah fuzzifier.</p>
     <span class="n">cntr</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">jm</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">fpc</span> <span class="o">=</span> <span class="n">fuzz</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">cmeans</span><span class="p">(</span>
         <span class="n">alldata</span><span class="p">,</span> <span class="n">ncenters</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 
-    <span class="c1"># Store fpc values for later</span>
+
     <span class="n">fpcs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fpc</span><span class="p">)</span>
 
-    <span class="c1"># Plot assigned clusters, for each data point in training set</span>
+
     <span class="n">cluster_membership</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ncenters</span><span class="p">):</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xpts</span><span class="p">[</span><span class="n">cluster_membership</span> <span class="o">==</span> <span class="n">j</span><span class="p">],</span>
                 <span class="n">ypts</span><span class="p">[</span><span class="n">cluster_membership</span> <span class="o">==</span> <span class="n">j</span><span class="p">],</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
 
-    <span class="c1"># Mark the center of each fuzzy cluster</span>
+
     <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">cntr</span><span class="p">:</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;rs&#39;</span><span class="p">)</span>
 
