@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://wahyuz98.github.io/Wahyu_Zainur.github.io/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://wahyuz98.github.io/Wahyu_Zainur.github.io/statistik deskriptif/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://wahyuz98.github.io/Wahyu_Zainur.github.io/Mengukur Jarak Data/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://wahyuz98.github.io/Wahyu_Zainur.github.io/Missing Values/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://wahyuz98.github.io/Wahyu_Zainur.github.io/Decision Tree/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://wahyuz98.github.io/Wahyu_Zainur.github.io/Clustering/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://wahyuz98.github.io/Wahyu_Zainur.github.io/Fuzzy C-Means Clustering/</loc>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
