@@ -523,7 +523,7 @@
         
           <li class="md-nav__item">
   <a href="#implementasi-deret-maclaurin-dengan-bahasa-pemrograman-python" class="md-nav__link">
-    Implementasi Deret Maclaurin dengan Bahasa Pemrograman Python
+    Implementasi Deret Maclaurin dengan Bahasa Pemrograman Python*
   </a>
   
 </li>
@@ -620,7 +620,7 @@
         
           <li class="md-nav__item">
   <a href="#implementasi-deret-maclaurin-dengan-bahasa-pemrograman-python" class="md-nav__link">
-    Implementasi Deret Maclaurin dengan Bahasa Pemrograman Python
+    Implementasi Deret Maclaurin dengan Bahasa Pemrograman Python*
   </a>
   
 </li>
@@ -677,6 +677,10 @@ f'(x) = e^x\\
 f^2(x) = e^x \\
 f^3(x) = e^x \\
 f^4(x) = e^x \\
+... \\
+... \\
+... \\
+f^n(x) = e^n
 $$</p>
 <h4 id="deret-maclaurin-ex"><em>Deret Maclaurin $e^x$</em><a class="headerlink" href="#deret-maclaurin-ex" title="Permanent link">&para;</a></h4>
 <p>$$
@@ -720,17 +724,25 @@ $$</p>
 <p>Didefinisikan sebagai rasio antara kesalahan perkiraan dan nilai perkiraan ke-n.</p>
 <p>Untuk menghitung Kesalahan perkiraan dibagi dengan nilai perkiraan ke -n, yang dapat didefinisikan sebagai berikut :
 $$
-ϵa = {Kesalahan Perkiraan \over Nilai PerkiraanKe-n}
+|ϵa| = {Kesalahan Perkiraan \over Nilai PerkiraanKe-n}
 $$
 Bisa juga dengan
 $$
-ϵa = {Nilai \quad Perkiraan \quad Sekarang - Nilai \quad Perkiraan \quad Sebelumnya \over Nilai \quad Perkiraan \quad Sekarang}
+|ϵa| = {ApproximateValue \quad ke (n) - ApproximateValue \quad ke(n-1) \over ApproximateValue \quad ke (n)}
 $$
-Untuk menghitung Persentasi dari Relative Approximate Error hanya dikalikan dengan 100
+Untuk menghitung Persentasi dari Relative Approximate Error hanya dikalikan dengan 100 %
 $$
-|ϵa| = {Nilai \quad Perkiraan \quad Sekarang - Nilai \quad Perkiraan \quad Sebelumnya \over Nilai \quad Perkiraan \quad Sekarang} X 100 %
+|ϵa| = {ApproximateValue \quad ke (n) - ApproximateValue \quad ke(n-1) \over ApproximateValue \quad ke (n)} X 100
 $$</p>
-<h3 id="implementasi-deret-maclaurin-dengan-bahasa-pemrograman-python"><em>Implementasi Deret Maclaurin dengan Bahasa Pemrograman Python</em><a class="headerlink" href="#implementasi-deret-maclaurin-dengan-bahasa-pemrograman-python" title="Permanent link">&para;</a></h3>
+<p>Dengan Approximate Value ke (n) = $2.716666666666667$ dan Approximate Value $ke (n-1) = 2.708333333333333$. Maka :
+$$
+|ϵa| = {(2.716666666666667 - 2.708333333333333) \over 2.716666666666667} X 100 \\
+|ϵa| = 0.0030674846625768394  \quad X \quad 100 \\
+|ϵa| = 0.3067484662576839
+$$
+Maka dapat diketahui Persentase Relative Approximate Error nya</p>
+<p>$|ϵa| = 0.3067484662576839$%</p>
+<h3 id="implementasi-deret-maclaurin-dengan-bahasa-pemrograman-python">Implementasi Deret Maclaurin dengan Bahasa Pemrograman Python*<a class="headerlink" href="#implementasi-deret-maclaurin-dengan-bahasa-pemrograman-python" title="Permanent link">&para;</a></h3>
 <p>Pada implentansi deret Maclaurin ini, menggunakan rumus $e^x$
 $$
 e^x≈f(0)+f'(0)x+ {f^2(0)x^2 \over 2!}+ {f^3(0)x^3 \over 3!}+....+{f^n(0)x^n \over n!}
@@ -742,9 +754,10 @@ f'(x) = 3e^{3x}\\
 f^2(x) = 9e^{3x} \\
 f^3(x) = 27e^{3x} \\
 f^4(x) = 81e^{3x} \\
-. \\
-. \\
-. \\
+... \\
+... \\
+... \\
+...
 $$
 Untuk menghitung $e^{3x}$, dimana x =1 dan ambang batasnya (batas error) = $0,001$. Untuk bisa mengetahui batas errornya yaitu dengan Appoximate Error (Perkiraan Kesalahan). Dengan Selisih dari Nilai sekarang pada suku sekarang dikurangi dengan suku sebelumnya / nilai sebelumnya</p>
 <p>Berikut Implementasi Code Pythonnya. Agar lebih mudah memahami code membuat variabel kosong terlebih dahulu (dengan memberikan nilai 0)</p>
@@ -828,7 +841,7 @@ $$</p>
 <table>
 <thead>
 <tr>
-<th>n</th>
+<th>f ke-</th>
 <th>$e^{3x}$</th>
 <th>$E_a$Approximate Error</th>
 <th>|ϵa|%Relative Percentage Error</th>
@@ -922,7 +935,7 @@ $$</p>
 </tbody>
 </table>
 <p><strong>Keterangan : </strong></p>
-<p>n = Iterasi / Suku </p>
+<p>f ke- = Iterasi / Suku / Turunan yang keberapa </p>
 <p>$e^{3x}$ = Nilai $e^{3x}$ yang dicari untuk bisa mendekati Nilai $e^{3x}$ yang sebenarnya</p>
 <p>$E_a$ = Nilai Approximate Error (Nilai Perkiraan Error)</p>
 <p>$|ϵa|%$ = Nilai Relative Persentase Error yang dihasilkan</p>
