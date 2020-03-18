@@ -1036,8 +1036,12 @@ $$</p>
 <p><em>Metode ini merupakan suatu teknik penyelesaian SPL berukuran $n x n$, $AX = b$, secara iteratif. Proses penyelesaian dimulai dengan suatu hampiran awal terhadap penyelesaian, X0, kemudian membentuk suatu serangkaian vector $X1, X2, … $ yang konvergen ke $X.$</em></p>
 </blockquote>
 <p>Metode Jacobi adalah metode iteratif matriks yang digunakan untuk menyelesaikan persamaan $A.x = b$ 
-untuk matriks kuadrat yang diketahui $A$ berukuran $ nxn $ dan diketahui vektor $b$ atau panjang $n$</p>
-<p>Metode Jacobi digunakan secara luas dalam perhitungan metode beda hingga (FDM), yang merupakan bagian penting dari lanskap keuangan kuantitatif. The Black-Scholes PDE dapat dirumuskan sedemikian rupa sehingga dapat diselesaikan dengan teknik beda hingga. Metode Jacobi adalah salah satu cara untuk menyelesaikan persamaan matriks yang dihasilkan dari FDM.</p>
+untuk matriks kuadrat yang diketahui $A$ berukuran $ nxn $ dan diketahui vektor $b$ atau panjang $n$. </p>
+<p>Secara Umum metode gauss jacobi didefinisikan sebagai berikut :
+$$
+\sum_{i = 1}^n x_i^{(k+1)} = {b_i - \sum_{j=1}^{i-1} a_{ij}x_{j}^{(k)} \sum_{j=i+1}^n a_{ij}x_j^{(k)} \over a_{ii}}
+$$
+Metode Jacobi digunakan secara luas dalam perhitungan metode beda hingga (FDM), yang merupakan bagian penting dari lanskap keuangan kuantitatif. The Black-Scholes PDE dapat dirumuskan sedemikian rupa sehingga dapat diselesaikan dengan teknik beda hingga. Metode Jacobi adalah salah satu cara untuk menyelesaikan persamaan matriks yang dihasilkan dari FDM.</p>
 <p>Algoritma untuk metode Jacobi relatif mudah. Kita mulai dengan persamaan matriks berikut:
 $$
 A. x = b
@@ -1164,8 +1168,12 @@ $$
 25 = 25 , Terbukti
 $$</p>
 <h2 id="metode-gauss-siedel">Metode Gauss Siedel<a class="headerlink" href="#metode-gauss-siedel" title="Permanent link">&para;</a></h2>
-<p>Metode Gauss-Siedel merupakan metode iterasi atau aproksimasi yang mengasumsikan bahwa persoalan dianalogikan seperti matrix $[A]{X}=[B]$ dengan batas bahwa matriksnya merupakan matriks $3x3$, elemen diagonalnya tidak sama dengan nol dan persamaannya bersifat konvergen.</p>
-<p>Untuk lebih jelasnya berikut penjelasan langkah dalam penyelesaian persamaan linier dengan metode Gauss-Siedel :</p>
+<p>Metode Gauss-Siedel merupakan metode iterasi atau aproksimasi yang mengasumsikan bahwa persoalan dianalogikan seperti matrix $[A]{X}=[B]$ dengan batas bahwa matriksnya merupakan matriks $3x3$, elemen diagonalnya tidak sama dengan nol dan persamaannya bersifat konvergen. </p>
+<p>Secara Umum metode gauss-siedel didefinisikan sebagai berikut:
+$$
+\sum_{i =1}^n x_i^{(k+1)} = {b_i - \sum_{j=1}^{i-1}a_{ij}x_j^{k+1} \sum_{j=i+1}^n a_{ij}x_k^{(k)} \over a_{ii}}
+$$
+Untuk lebih jelasnya berikut penjelasan langkah dalam penyelesaian persamaan linier dengan metode Gauss-Siedel :</p>
 <p>Sistem Persamaan Linier:
 $$
 a_{11}x_1 + a_{12}x_2 + a_{13}x_3 = b_1 \\
