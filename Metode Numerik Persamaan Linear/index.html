@@ -1,0 +1,1385 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Repository Untuk Tugas">
+      
+      
+        <link rel="canonical" href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/Metode Numerik Persamaan Linear/">
+      
+      
+        <meta name="author" content="Wahyu Zainur Putra">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Tugas 3 - (180411100128) Wahyu Zainur Putra</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#metode-numerik-untuk-solusi-persamaan-linear" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/" title="(180411100128) Wahyu Zainur Putra" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              (180411100128) Wahyu Zainur Putra
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Tugas 3
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wahyu Zainur Putra
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link">
+          Study Data Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../index_komnum/" class="md-tabs__link md-tabs__link--active">
+          Study Computation Numeric
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/" title="(180411100128) Wahyu Zainur Putra" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    (180411100128) Wahyu Zainur Putra
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wahyu Zainur Putra
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Study Data Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Study Data Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Halaman Profile" class="md-nav__link">
+      Halaman Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../statistik deskriptif/" title="Statistik Deskriptif" class="md-nav__link">
+      Statistik Deskriptif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mengukur Jarak Data/" title="Mengukur Jarak Data" class="md-nav__link">
+      Mengukur Jarak Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Missing Values/" title="Missing Values" class="md-nav__link">
+      Missing Values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Decision Tree/" title="Decision Tree" class="md-nav__link">
+      Decision Tree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Clustering/" title="Clustering" class="md-nav__link">
+      Clustering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fuzzy C-Means Clustering/" title="Fuzzy C-Means Clustering" class="md-nav__link">
+      Fuzzy C-Means Clustering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Regresi Linear Berganda/" title="Regresi Linear Berganda" class="md-nav__link">
+      Regresi Linear Berganda
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Study Computation Numeric
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Study Computation Numeric
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index_komnum/" title="Halaman Profile" class="md-nav__link">
+      Halaman Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Error di Dalam Komputasi/" title="Tugas 1" class="md-nav__link">
+      Tugas 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mencari Nilai Akar Dalam Persamaan Aljabar/" title="Tugas 2" class="md-nav__link">
+      Tugas 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tugas 3
+      </label>
+    
+    <a href="./" title="Tugas 3" class="md-nav__link md-nav__link--active">
+      Tugas 3
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pendahuluan-persamaan-linear" class="md-nav__link">
+    Pendahuluan Persamaan Linear
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metode-eliminasi-gauss" class="md-nav__link">
+    Metode Eliminasi Gauss
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-forward-elimination" class="md-nav__link">
+    1) Forward Elimination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-backward-substitution" class="md-nav__link">
+    2. Backward Substitution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-eliminasi-gauss-dengan-python" class="md-nav__link">
+    Implementasi Metode Eliminasi Gauss Dengan Python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-forward-elimination-dan-backward-substitution-dengan-python" class="md-nav__link">
+    Implementasi Metode Forward Elimination dan Backward Substitution Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metode-gauss-jacobi" class="md-nav__link">
+    Metode Gauss Jacobi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-gauss-jacobi-dengan-python" class="md-nav__link">
+    Implementasi Metode Gauss Jacobi Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metode-gauss-siedel" class="md-nav__link">
+    Metode Gauss Siedel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-gauss-siedel-pada-python" class="md-nav__link">
+    Implementasi Metode Gauss Siedel Pada Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pendahuluan-persamaan-linear" class="md-nav__link">
+    Pendahuluan Persamaan Linear
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metode-eliminasi-gauss" class="md-nav__link">
+    Metode Eliminasi Gauss
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-forward-elimination" class="md-nav__link">
+    1) Forward Elimination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-backward-substitution" class="md-nav__link">
+    2. Backward Substitution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-eliminasi-gauss-dengan-python" class="md-nav__link">
+    Implementasi Metode Eliminasi Gauss Dengan Python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-forward-elimination-dan-backward-substitution-dengan-python" class="md-nav__link">
+    Implementasi Metode Forward Elimination dan Backward Substitution Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metode-gauss-jacobi" class="md-nav__link">
+    Metode Gauss Jacobi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-gauss-jacobi-dengan-python" class="md-nav__link">
+    Implementasi Metode Gauss Jacobi Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metode-gauss-siedel" class="md-nav__link">
+    Metode Gauss Siedel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-metode-gauss-siedel-pada-python" class="md-nav__link">
+    Implementasi Metode Gauss Siedel Pada Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/edit/master/docs/Metode Numerik Persamaan Linear.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="metode-numerik-untuk-solusi-persamaan-linear"><strong><em>Metode Numerik Untuk Solusi Persamaan Linear</em></strong><a class="headerlink" href="#metode-numerik-untuk-solusi-persamaan-linear" title="Permanent link">&para;</a></h1>
+<h2 id="pendahuluan-persamaan-linear"><em>Pendahuluan Persamaan Linear</em><a class="headerlink" href="#pendahuluan-persamaan-linear" title="Permanent link">&para;</a></h2>
+<p>Persamaan Linear dapat ditulis dalam bentuk matriks :
+$$
+A.x = B
+$$
+Dimana A adalah koeﬁsien matrix dan b adalah vector sisi kanan :</p>
+<p><img alt="matrix.PNG" src="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/blob/master/Komnum%20persamaan/Komnum%20persamaan/matrix.PNG?raw=true" /></p>
+<h2 id="metode-eliminasi-gauss"><em>Metode Eliminasi Gauss</em><a class="headerlink" href="#metode-eliminasi-gauss" title="Permanent link">&para;</a></h2>
+<p>Mencari solusi persamaan linear dengan membuat matrix triangular atas.</p>
+<p>Terdiri dari dua tahap :</p>
+<ol>
+<li>Forward Elimination (eliminasi maju)</li>
+<li>Backward substitution (substitusi mundur)</li>
+</ol>
+<h3 id="1-forward-elimination"><strong>1) Forward Elimination</strong><a class="headerlink" href="#1-forward-elimination" title="Permanent link">&para;</a></h3>
+<p>Tujuan Forward Elimination adalah untuk membentuk matriks koefisien menjadi Upper Triangular Matrix </p>
+<p>Sepasang n persamaan dan n variabel yang tidak diketahui
+$$
+a_{11}x_1 + a_{12}x_2 + a_{13}x_3+ ... + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + a_{23}x_3+ ... + a_{2n}x_n = b_2 \\
+a_{31}x_1 + a_{32}x_2 + a_{33}x_3+ ... + a_{3n}x_n = b_3 \\
+... \quad ... \quad ... \quad ... \quad ... \quad ... \quad ... \\
+... \quad ... \quad ... \quad ... \quad ... \quad ... \quad ... \\
+... \quad ... \quad ... \quad ... \quad ... \quad ... \quad ... \\
+a_{n1}x_1 + a_{n2}x_2 + a_{n3}x_3+ ... + a_{nn}x_n = b_n
+$$
+Dengan contoh :
+$$
+2x_1 + 3x_2 - 2x_3 -x_4 = -2 \\
+2x_1 + 5x_2 - 3x_3 + x_4 = 7 \\
+-2x_1 + x_2 + 3x_3 - 2x_4 = 1 \\
+-5x_1 + 2x_2 - x_3 +3x_4 = 8
+$$
+maka dalam bentuk matrix nya :</p>
+<p><img alt="matrix2.PNG" src="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/blob/master/Komnum%20persamaan/matrix2.PNG?raw=true" /></p>
+<p>untuk melakukan Forward Elimination (Eliminasi maju). berikut seperti contoh di bawah ini</p>
+<p><img alt="forward_eliminasi1.PNG" src="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/blob/master/Komnum%20persamaan/forward_eliminasi1.PNG?raw=true" /></p>
+<p><img alt="forward_eliminasi2.PNG" src="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/blob/master/Komnum%20persamaan/forward_eliminasi2.PNG?raw=true" /></p>
+<h3 id="2-backward-substitution"><strong>2. Backward Substitution</strong><a class="headerlink" href="#2-backward-substitution" title="Permanent link">&para;</a></h3>
+<p>Proses penyelesaian sistem persamaan linear yang telah diubah menjadi bentuk eselon baris atau bentuk eselon baris tereduksi. Persamaan terakhir diselesaikan pertama, lalu selanjutnya ke terakhir</p>
+<p>Berikut setelah melakukan Eliminasi Maju (Forward Elimination), maka bisa melakukan Backward Substitution (Substitusi Mundur), berikut
+$$
+x_1 + {3 \over 2}x_2 - x_3 - {1 \over 2}x_4 = -1 \\
+x_2 - {1 \over 2}x_3 + x_4 = {9 \over 2} \\
+x_3 - {7 \over 3}x_4 = - {19 \over 3}\\
+x_4 = {572 \over 143} = 4
+$$
+maka diperoleh $x_4 = {572 \over 143} = 4$, maka
+$$
+x_3 - {7 \over 3}x_4 = - {19 \over 3}\\
+x_3 - {7 \over 3}(4) = -{19 \over 3}\\
+x_3 = -{19 \over 3}+ {28 \over 3} \\
+x_3 = {9 \over 3}\\
+x_3 = 3
+$$
+diperoleh $x_3 = {2 \over 3}$, maka lanjut ke substitusi berikutnya 
+$$
+x_2 - {1 \over 2}x_3 + x_4 = {9 \over 2} \\
+x_2 - {1 \over 2}(3)+ 4 = {9 \over 2}\\
+x_2 - {3 \over 2}+4 = {9 \over 2}\\
+x_2 = {9 \over 2}+ {3 \over 2}-4 \\
+x_2 = {12 \over 2} - 4\\
+x_2 = 6 - 4 = 2
+$$
+diperoleh $x_2 = {5 \over 6}$, maka lanjut ke substitusi berikutnya 
+$$
+x_1 + {3 \over 2}x_2 - x_3 - {1 \over 2}x_4 = -1\\
+x_1 + {3 \over 2}(2) - (3) - {1 \over 2}(4) = -1\\
+x_1 + 3 -3 - 2 = -1 \\
+x_1 -2 = -1 \\
+x_1 = 1
+$$
+Maka diperoleh :
+$$
+x_4 = 4 \quad , x_3 = 3 \quad, x_2 = 2 \quad dan \quad x_1 = 1
+$$
+<img alt="Gaus_eliminasi.PNG" src="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/blob/master/Komnum%20persamaan/Gaus_eliminasi.PNG?raw=true" /></p>
+<h3 id="implementasi-metode-eliminasi-gauss-dengan-python">Implementasi Metode Eliminasi Gauss Dengan Python<a class="headerlink" href="#implementasi-metode-eliminasi-gauss-dengan-python" title="Permanent link">&para;</a></h3>
+<p>Pada Implementasi Metode Eliminasi dengan Python, Langkah awal dengan meng- import numpy as np lalu memberikan variabel kosong(list kosong) / inisialisasi agar memudahkan untuk bisa melakukan inputan dimasukkan / ditambahkan dalam list kosong tersebut, berikut codenya</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c1">#Definisi Matrix</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan ukuran Matrix: &quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">baris</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan Nilai Koefisien X: &quot;</span><span class="p">))</span>
+        <span class="n">baris</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan Hasil: &quot;</span><span class="p">))</span>
+    <span class="n">B</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Lalu memberikan inisialisasi Matrix =n.array ,kemuian memberikan len matrix untuk mengetahui ukuran matrix yang digunakan dan menge-print Persamaan A dan Hasil B untuk mudah dimengerti</p>
+<div class="codehilite"><pre><span></span><span class="n">Matrix</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">Hasil</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">Matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Persamaan A = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">Matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hasil B = &quot;</span><span class="p">,</span><span class="n">Hasil</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Kemudian memberikan code Eliminasi Gauss pada Forward Eliminasi dan menge-print hasil akhir dari persamaan yang dieliminasi beserta hasil(b)nya , berikut codenya</p>
+<div class="codehilite"><pre><span></span><span class="c1">#Eliminasi Gauss Maju</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span> <span class="p">:</span>
+            <span class="n">lam</span><span class="o">=</span><span class="n">Matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="o">/</span><span class="n">Matrix</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">]</span>
+            <span class="n">Matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">:</span><span class="n">n</span><span class="p">]</span><span class="o">=</span><span class="n">Matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">:</span><span class="n">n</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">Matrix</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">:</span><span class="n">n</span><span class="p">]</span><span class="o">*</span><span class="n">lam</span><span class="p">)</span>
+            <span class="n">Hasil</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">Hasil</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">Hasil</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">lam</span><span class="p">)</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Persamaan A Yang Sekarang : &quot;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">Matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hasil B : &quot;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">Hasil</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Lalu memberikan code Substitusi ,yang bisa kita sebut sebagai Backward Substitution(Substitusi Mundur), berikut codenya </p>
+<div class="codehilite"><pre><span></span><span class="c1">#Backward Subtitution</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="nb">float</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">Hasil</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Matrix</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">]))</span><span class="o">/</span><span class="n">Matrix</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="n">m</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Nilai X &#39;</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+</pre></div>
+
+
+<p>Berikut Hasil Code yang telah dijalankan :</p>
+<div class="codehilite"><pre><span></span><span class="n">Masukkan</span> <span class="n">ukuran</span> <span class="n">Matrix</span><span class="p">:</span> <span class="mi">3</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">Koefisien</span> <span class="n">X</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Hasil</span><span class="p">:</span> <span class="o">-</span><span class="mi">6</span>
+<span class="n">Masukkan</span> <span class="n">Hasil</span><span class="p">:</span> <span class="mi">3</span>
+<span class="n">Masukkan</span> <span class="n">Hasil</span><span class="p">:</span> <span class="mi">9</span>
+<span class="n">Persamaan</span> <span class="n">A</span> <span class="o">=</span> 
+ <span class="p">[[</span> <span class="mf">1.</span>  <span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">1.</span> <span class="o">-</span><span class="mf">2.</span>  <span class="mf">1.</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">2.</span>  <span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]]</span>
+<span class="n">Hasil</span> <span class="n">B</span> <span class="o">=</span>  <span class="p">[</span><span class="o">-</span><span class="mf">6.</span>  <span class="mf">3.</span>  <span class="mf">9.</span><span class="p">]</span>
+<span class="n">Persamaan</span> <span class="n">A</span> <span class="n">Yang</span> <span class="n">Sekarang</span> <span class="p">:</span>  
+ <span class="p">[[</span> <span class="mf">1.</span>  <span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.</span> <span class="o">-</span><span class="mf">3.</span>  <span class="mf">0.</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">0.</span>  <span class="mf">3.</span><span class="p">]]</span>
+<span class="n">Hasil</span> <span class="n">B</span> <span class="p">:</span>  
+ <span class="p">[</span><span class="o">-</span><span class="mf">6.</span>  <span class="mf">9.</span>  <span class="mf">6.</span><span class="p">]</span>
+<span class="n">Nilai</span> <span class="n">X</span>  <span class="mi">3</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">Nilai</span> <span class="n">X</span>  <span class="mi">2</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.0</span>
+<span class="n">Nilai</span> <span class="n">X</span>  <span class="mi">1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.0</span>
+</pre></div>
+
+
+<p>Maka diperoleh nilai dari persamaan diatas :
+$$
+x_1 = -5 \quad , x_2 = -3 \quad, x_3 = 2
+$$
+Bila Melakukan Pengecekan dengan persamaan diatas menggunakan persamaan 1, yaitu
+$$
+x_1+x_2+x_3 = -6, maka \\
+(-5)+(-3)+2 = -6 \\
+-8 + 2 = -6 \\
+-6 = -6 , Terbukti
+$$
+Pada Persamaan 2 , yaitu :
+$$
+x_1 - 2x_2 + x_3 = 3, maka \\
+(-5) - 2(-3) + 2 = 3 \\
+-5 +6 + 2 = 3 \\
+1 + 2 = 3 \\
+3 = 3, Terbukti 
+$$</p>
+<h4 id="implementasi-metode-forward-elimination-dan-backward-substitution-dengan-python"><strong>Implementasi Metode Forward Elimination dan Backward Substitution Dengan Python</strong><a class="headerlink" href="#implementasi-metode-forward-elimination-dan-backward-substitution-dengan-python" title="Permanent link">&para;</a></h4>
+<p>Pada Implementasi Metode Gauss Forward dan Backward Substitution dengan python, contohnya menggunakan persamaan yang berikut persamaanya sama seperti contoh diatas :
+$$
+2x_1 + 3x_2 - 2x_3 -x_4 = -2 \\
+2x_1 + 5x_2 - 3x_3 + x_4 = 7 \\
+-2x_1 + x_2 + 3x_3 - 2x_4 = 1 \\
+-5x_1 + 2x_2 - x_3 +3x_4 = 8
+$$
+Di Implementasikan dengan bahasa pemrograman Python, berikut hasil Code python pada persamaan yang telah dihitung secara manual, List Programnya</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">forward_elimination</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Mengkalkulasi Forward pada Gauss Eliminasi.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="n">factor</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">row</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="n">row</span><span class="p">,</span><span class="n">row</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">row</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+
+            <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">row</span><span class="p">]</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;A = </span><span class="se">\n</span><span class="si">%s</span><span class="s1"> and b = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">back_substitution</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">    Backward Substitution, setelah melakukan Eliminasi Forward.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">sums</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">row</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="n">sums</span> <span class="o">=</span> <span class="n">sums</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="n">row</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">sums</span> <span class="o">/</span> <span class="n">a</span><span class="p">[</span><span class="n">row</span><span class="p">,</span><span class="n">row</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">gauss</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function performs Gauss elimination without pivoting.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Check for zero diagonal elements</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">((</span><span class="s1">&#39;Division by zero will occur; &#39;</span>
+                                  <span class="s1">&#39;pivoting currently not supported&#39;</span><span class="p">))</span>
+
+    <span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">forward_elimination</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">back_substitution</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># Main program starts here</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
+                  <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span>
+                  <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Persamaan A = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hasil b = &quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gauss</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Gauss result is x = </span><span class="se">\n</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Dapat kita ketahui Persamaan A sebagai persamaan Koefisien $x_1,x_2,x_3,x_4$ dan Hasil b merupakan hasil dari ke 4 persamaan tersebut. Berikut Hasil program yang telah dijalankan :</p>
+<div class="codehilite"><pre><span></span><span class="n">Persamaan</span> <span class="n">A</span> <span class="o">=</span> 
+ <span class="p">[[</span> <span class="mi">2</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">2</span>  <span class="mi">5</span> <span class="o">-</span><span class="mi">3</span>  <span class="mi">1</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mi">5</span>  <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">3</span><span class="p">]]</span>
+<span class="n">Hasil</span> <span class="n">b</span> <span class="o">=</span>  <span class="p">[</span><span class="o">-</span><span class="mi">2</span>  <span class="mi">7</span>  <span class="mi">1</span>  <span class="mi">8</span><span class="p">]</span>
+<span class="n">A</span> <span class="o">=</span> 
+<span class="p">[[</span> <span class="mi">2</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">0</span>  <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">0</span>  <span class="mi">4</span>  <span class="mi">1</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">0</span>  <span class="mi">9</span> <span class="o">-</span><span class="mi">6</span>  <span class="mi">0</span><span class="p">]]</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span>  <span class="mi">9</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">3</span><span class="p">]</span>
+<span class="n">A</span> <span class="o">=</span> 
+<span class="p">[[</span> <span class="mi">2</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">0</span>  <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">7</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">0</span>  <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">9</span><span class="p">]]</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span> <span class="o">-</span><span class="mi">2</span>   <span class="mi">9</span> <span class="o">-</span><span class="mi">19</span> <span class="o">-</span><span class="mi">37</span><span class="p">]</span>
+<span class="n">A</span> <span class="o">=</span> 
+<span class="p">[[</span>  <span class="mi">2</span>   <span class="mi">3</span>  <span class="o">-</span><span class="mi">2</span>  <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+ <span class="p">[</span>  <span class="mi">0</span>   <span class="mi">2</span>  <span class="o">-</span><span class="mi">1</span>   <span class="mi">2</span><span class="p">]</span>
+ <span class="p">[</span>  <span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">3</span>  <span class="o">-</span><span class="mi">7</span><span class="p">]</span>
+ <span class="p">[</span>  <span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span> <span class="o">-</span><span class="mi">11</span><span class="p">]]</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span> <span class="o">-</span><span class="mi">2</span>   <span class="mi">9</span> <span class="o">-</span><span class="mi">19</span> <span class="o">-</span><span class="mi">43</span><span class="p">]</span>
+<span class="n">Gauss</span> <span class="n">result</span> <span class="ow">is</span> <span class="n">x</span> <span class="o">=</span> 
+ <span class="p">[[</span><span class="mf">0.76515152</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">1.98484848</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">2.78787879</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">3.90909091</span><span class="p">]]</span>
+</pre></div>
+
+
+<p>Dapat kita ketahui hasil dari $x_1,x_2,x_3,x_4$, yaitu
+$$
+x_4 = 3.90909091, \quad mendekati  \quad nilai \quad x_4 \quad yang \quad sebenarnya \\
+x_3 = 2.78787879, \quad mendekati  \quad nilai \quad x_3 \quad yang \quad sebenarnya \\
+x_2 = 1.98484848, \quad mendekati  \quad nilai \quad x_2 \quad yang \quad sebenarnya \\
+x_1 = 0.76515152, \quad mendekati  \quad nilai \quad x_1 \quad yang \quad sebenarnya
+$$
+Pada hasil Code Python yang telah di Implementasikan hampir mendekati nilai x yang sebenarnya. Secara hitungan Manual , berikut nilai $x_1,x_2,x_3,x_4$ yang sebenarnya yaitu :
+$$
+x_4 = 4 \quad, x_3 = 3 \quad ,x_2 = 2 \quad dan \quad x_1 = 1
+$$</p>
+<h2 id="metode-gauss-jacobi"><strong><em>Metode Gauss Jacobi</em></strong><a class="headerlink" href="#metode-gauss-jacobi" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><em>Metode ini merupakan suatu teknik penyelesaian SPL berukuran $n x n$, $AX = b$, secara iteratif. Proses penyelesaian dimulai dengan suatu hampiran awal terhadap penyelesaian, X0, kemudian membentuk suatu serangkaian vector $X1, X2, … $ yang konvergen ke $X.$</em></p>
+</blockquote>
+<p>Metode Jacobi adalah metode iteratif matriks yang digunakan untuk menyelesaikan persamaan $A.x = b$ 
+untuk matriks kuadrat yang diketahui $A$ berukuran $ nxn $ dan diketahui vektor $b$ atau panjang $n$</p>
+<p>Metode Jacobi digunakan secara luas dalam perhitungan metode beda hingga (FDM), yang merupakan bagian penting dari lanskap keuangan kuantitatif. The Black-Scholes PDE dapat dirumuskan sedemikian rupa sehingga dapat diselesaikan dengan teknik beda hingga. Metode Jacobi adalah salah satu cara untuk menyelesaikan persamaan matriks yang dihasilkan dari FDM.</p>
+<p>Algoritma untuk metode Jacobi relatif mudah. Kita mulai dengan persamaan matriks berikut:
+$$
+A. x = b
+$$</p>
+<p>Kemudian, diketahui bahwa $A = D + (L+U),$ dimana D merupakan matriks diagonal $L$ merupakan matriks segitiga bawah, dan $U$ merupakan matriks segitiga atas</p>
+<p>Kemudian, persamaan di atas dapat diubah menjadi :</p>
+<p>$Dx+(L+U)x = b,$</p>
+<p>Kemudian,</p>
+<p>$x = D^{-1} [b-(L+U)x],$</p>
+<p>Jika ditulis dalam aturan iteratif, maka metode Jacobi dapat ditulis sebagai :
+$$
+x^{(k+1)} = D^{-1}[ b - (L+U)x^{(k)}]
+$$
+dimana k merupakan banyaknya iterasi, Jika $x^{(k)}$ menyatakan hampiran ke- $k$ penyelesaian SPL, maka $x^{(0)}$ adalah hampiran awal.</p>
+<p><img alt="gaus_jacobi.PNG" src="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/blob/master/Komnum%20persamaan/gaus_jacobi.PNG?raw=true" /></p>
+<h3 id="implementasi-metode-gauss-jacobi-dengan-python">Implementasi Metode Gauss Jacobi Dengan Python<a class="headerlink" href="#implementasi-metode-gauss-jacobi-dengan-python" title="Permanent link">&para;</a></h3>
+<p>Pada Implementasi Metode Gauss Jacobi dengan Python . Pertama harus meng-import kan numpy as np dan memberikan variabel Iterasi Maksimum yang akan dijalankan ,berikut codenya </p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> 
+
+<span class="n">ITERATION_LIMIT</span> <span class="o">=</span> <span class="mi">1000</span> 
+</pre></div>
+
+
+<p>Setelah melakukan import dan memberikan variabel iterasi maksimum , lalu memberikan inisialisasi matrix dan inisialisasi RHS vector (Hasil dari Vector/Persamaan),berikut codenya</p>
+<div class="codehilite"><pre><span></span><span class="c1"># initialize the matrix</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">10.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+              <span class="p">[</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">11.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">2.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">8.</span><span class="p">]])</span>
+<span class="c1"># initialize the RHS vector</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">6.</span><span class="p">,</span> <span class="mf">25.</span><span class="p">,</span> <span class="o">-</span><span class="mf">11.</span><span class="p">,</span> <span class="mf">15.</span><span class="p">])</span> 
+</pre></div>
+
+
+<p>Kemudian agar mempermudah hasil dari code maka mengprint persamaan yang sedang digunakan, berikut codenya</p>
+<div class="codehilite"><pre><span></span><span class="c1"># print persamaan</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Persamaan :&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;{}*x{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+           <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">print</span><span class="p">()</span> 
+</pre></div>
+
+
+<p>Kemudian memberikan encode inisial dan looping saat akan melakukan perulangan yang akan terus dicari sampai persamaan yang telah diberikan akan mendapatkan hasil yang sebenarnya, berikut hasil codenya</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">it_count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ITERATION_LIMIT</span> <span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Solusi Sekarang:&quot;</span> <span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">s1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:</span><span class="n">i</span><span class="p">],</span> <span class="n">x</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">s2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:],</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:])</span>
+        <span class="n">x_new</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">s1</span> <span class="o">-</span> <span class="n">s2</span><span class="p">)</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> 
+
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">0.</span><span class="p">):</span>
+        <span class="k">break</span> 
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span> 
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Solution:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x1 , x2, x3, x4 &quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Maka Output dari Hasil Code yang telah dijalankan ,berikut ini:</p>
+<div class="codehilite"><pre><span></span><span class="n">Persamaan</span> <span class="p">:</span>
+<span class="mf">10.0</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">x2</span> <span class="o">+</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="mf">0.0</span><span class="o">*</span><span class="n">x4</span> <span class="o">=</span> <span class="mf">6.0</span>
+<span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="mf">11.0</span><span class="o">*</span><span class="n">x2</span> <span class="o">+</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="mf">3.0</span><span class="o">*</span><span class="n">x4</span> <span class="o">=</span> <span class="mf">25.0</span>
+<span class="mf">2.0</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">x2</span> <span class="o">+</span> <span class="mf">10.0</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">x4</span> <span class="o">=</span> <span class="o">-</span><span class="mf">11.0</span>
+<span class="mf">0.0</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="mf">3.0</span><span class="o">*</span><span class="n">x2</span> <span class="o">+</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="mf">8.0</span><span class="o">*</span><span class="n">x4</span> <span class="o">=</span> <span class="mf">15.0</span>
+
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.</span> <span class="mf">0.</span> <span class="mf">0.</span> <span class="mf">0.</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.6</span>         <span class="mf">2.27272727</span> <span class="o">-</span><span class="mf">1.1</span>         <span class="mf">1.875</span>     <span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.04727273</span>  <span class="mf">1.71590909</span> <span class="o">-</span><span class="mf">0.80522727</span>  <span class="mf">0.88522727</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.93263636</span>  <span class="mf">2.05330579</span> <span class="o">-</span><span class="mf">1.04934091</span>  <span class="mf">1.13088068</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.01519876</span>  <span class="mf">1.95369576</span> <span class="o">-</span><span class="mf">0.96810863</span>  <span class="mf">0.97384272</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.9889913</span>   <span class="mf">2.01141473</span> <span class="o">-</span><span class="mf">1.0102859</span>   <span class="mf">1.02135051</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.00319865</span>  <span class="mf">1.99224126</span> <span class="o">-</span><span class="mf">0.99452174</span>  <span class="mf">0.99443374</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99812847</span>  <span class="mf">2.00230688</span> <span class="o">-</span><span class="mf">1.00197223</span>  <span class="mf">1.00359431</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.00062513</span>  <span class="mf">1.9986703</span>  <span class="o">-</span><span class="mf">0.99903558</span>  <span class="mf">0.99888839</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99967415</span>  <span class="mf">2.00044767</span> <span class="o">-</span><span class="mf">1.00036916</span>  <span class="mf">1.00061919</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.0001186</span>   <span class="mf">1.99976795</span> <span class="o">-</span><span class="mf">0.99982814</span>  <span class="mf">0.99978598</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99994242</span>  <span class="mf">2.00008477</span> <span class="o">-</span><span class="mf">1.00006833</span>  <span class="mf">1.0001085</span> <span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.00002214</span>  <span class="mf">1.99995896</span> <span class="o">-</span><span class="mf">0.99996916</span>  <span class="mf">0.99995967</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99998973</span>  <span class="mf">2.00001582</span> <span class="o">-</span><span class="mf">1.00001257</span>  <span class="mf">1.00001924</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.00000409</span>  <span class="mf">1.99999268</span> <span class="o">-</span><span class="mf">0.99999444</span>  <span class="mf">0.9999925</span> <span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99999816</span>  <span class="mf">2.00000292</span> <span class="o">-</span><span class="mf">1.0000023</span>   <span class="mf">1.00000344</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.00000075</span>  <span class="mf">1.99999868</span> <span class="o">-</span><span class="mf">0.99999899</span>  <span class="mf">0.99999862</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99999967</span>  <span class="mf">2.00000054</span> <span class="o">-</span><span class="mf">1.00000042</span>  <span class="mf">1.00000062</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.00000014</span>  <span class="mf">1.99999976</span> <span class="o">-</span><span class="mf">0.99999982</span>  <span class="mf">0.99999975</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99999994</span>  <span class="mf">2.0000001</span>  <span class="o">-</span><span class="mf">1.00000008</span>  <span class="mf">1.00000011</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.00000003</span>  <span class="mf">1.99999996</span> <span class="o">-</span><span class="mf">0.99999997</span>  <span class="mf">0.99999995</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">0.99999999</span>  <span class="mf">2.00000002</span> <span class="o">-</span><span class="mf">1.00000001</span>  <span class="mf">1.00000002</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.</span>          <span class="mf">1.99999999</span> <span class="o">-</span><span class="mf">0.99999999</span>  <span class="mf">0.99999999</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">2.</span> <span class="o">-</span><span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">2.</span> <span class="o">-</span><span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">2.</span> <span class="o">-</span><span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">2.</span> <span class="o">-</span><span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">2.</span> <span class="o">-</span><span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="n">Solusi</span> <span class="n">Sekarang</span><span class="p">:</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">2.</span> <span class="o">-</span><span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="n">Solution</span><span class="p">:</span>
+<span class="n">x1</span> <span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span><span class="p">,</span> <span class="n">x4</span>  <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">2.</span> <span class="o">-</span><span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Maka diperoleh hasil dari persamaan diatas
+$$
+x_1 = 1, x_2 = 2,x_3 = -1 ,x_4 = 1
+$$
+Bila melakukan Pengecekan ,misal pada persamaan 1
+$$
+10x_1 - x_2 + 2x_3 = 6, maka \\
+10(1)- (2) + 2(-1) = 6 \\
+10 - 2 - 2 = 6 \\
+6 = 6, Terbukti
+$$
+Pada persamaan 2
+$$
+-x_1 + 11x_2 -x_3 +3x_4 = 25,maka \\
+-(1) + 11(2) -(-1) +3(1) = 25 \\
+-1 +22 +1 +3 = 25 \\
+25 = 25 , Terbukti
+$$</p>
+<h2 id="metode-gauss-siedel">Metode Gauss Siedel<a class="headerlink" href="#metode-gauss-siedel" title="Permanent link">&para;</a></h2>
+<p>Metode Gauss-Siedel merupakan metode iterasi atau aproksimasi yang mengasumsikan bahwa persoalan dianalogikan seperti matrix $[A]{X}=[B]$ dengan batas bahwa matriksnya merupakan matriks $3x3$, elemen diagonalnya tidak sama dengan nol dan persamaannya bersifat konvergen.</p>
+<p>Untuk lebih jelasnya berikut penjelasan langkah dalam penyelesaian persamaan linier dengan metode Gauss-Siedel :</p>
+<p>Sistem Persamaan Linier:
+$$
+a_{11}x_1 + a_{12}x_2 + a_{13}x_3 = b_1 \\
+a_{21}x_1 + a_{22}x_2 + a_{23}x_3 = b_2 \\
+a_{31}x_1 + a_{32}x_2 + a_{33}x_3 = b_3
+$$
+Pada Langkah awal gunakan persamaan diatas lalu cari $x1, x2, x3$ berikut</p>
+<p>Pada Persamaan Pertama :
+$$
+x_1 = {b_1 - a_{13}x_3 - a_{12}x_2 \over a_{11}}
+$$
+Pada Persamaan Kedua :
+$$
+x_2 = {b_2 -a_{21}x_1 - a_{23}x_3 \over a_{22}}
+$$
+Pada Persamaan Ketiga :
+$$
+x_3 = {b_3 - a_{31}x_1 - a_{32}x_2 \over a_{33}}
+$$
+<strong>Iterasi Pertama :</strong></p>
+<p>Mencari nilai $x_1$ dengan menggunakan $x_2 = 0$ dan $x_3 = 0$
+$$
+x_1 = {b_1 - a_{13}x_3 - a_{12}x_2 \over a_{11}} \\
+x_1 = {b_1 \over a_{11}}, x_1 \quad Ini \quad adalah \quad x_1(baru)
+$$
+Mencari nilai $x_2$ dengan menggunakan $x_3 = 0$ dan $x_1(baru)$
+$$
+x_2 = {b_2 -a_{21}x_1 - a_{23}x_3 \over a_{22}} \\
+x_2 = {b_2 - a_{21}x_1 \over a_{22}}, x_2 \quad Ini \quad adalah \quad x_2(baru)
+$$
+Mencari nilai $x_3$ dengan menggunakan $x_2(baru)$ dan $x_1(baru)$
+$$
+x_3 = {b_3 - a_{31}x_1 - a_{32}x_2 \over a_{33}}
+$$
+<strong>$Iterasi \quad Selanjutnya ........$</strong></p>
+<h3 id="implementasi-metode-gauss-siedel-pada-python">Implementasi Metode Gauss Siedel Pada Python<a class="headerlink" href="#implementasi-metode-gauss-siedel-pada-python" title="Permanent link">&para;</a></h3>
+<p>Pada Implementasi Metode Gauss Siedel dengan Python, Langkah Awal dengan membuat sebuah Fungsi Seidel , berikut codenya </p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">seidel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span> <span class="p">,</span><span class="n">b</span><span class="p">):</span>        
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                    
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>         
+        <span class="c1"># temp variable d to store b[j] </span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>                   
+
+        <span class="c1"># to calculate respective xi, yi, zi </span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>      
+            <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="o">!=</span> <span class="n">i</span><span class="p">):</span> 
+                <span class="n">d</span><span class="o">-=</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+        <span class="c1"># updating the value of our solution         </span>
+        <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span> <span class="o">/</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+
+    <span class="c1"># returning our updated solution            </span>
+    <span class="k">return</span> <span class="n">x</span>     
+</pre></div>
+
+
+<p>Lalu memberikan inputan variabel yang akan digunakan</p>
+<div class="codehilite"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>                              
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>                         
+<span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span> 
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Menge-print Persamaan A , X dan B </p>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Persamaan A = &quot;</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hasil B = &quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x = &quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> 
+</pre></div>
+
+
+<p>Melakukan looping berapa banyak yang akan dijalankan tergantung pada iterasi yang ditetapkan</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">):</span>             
+    <span class="n">x</span> <span class="o">=</span> <span class="n">seidel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+    <span class="c1">#print each time the updated solution </span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Current x = &quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x1, x2, x3 = &quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> 
+</pre></div>
+
+
+<p>Berikut Hasil Code yang telah dijalankan :</p>
+<div class="codehilite"><pre><span></span><span class="n">Persamaan</span> <span class="n">A</span> <span class="o">=</span>  <span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="n">Hasil</span> <span class="n">B</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.39999999999999997</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.6000000000000001</span><span class="p">,</span> <span class="mf">0.9599999999999997</span><span class="p">,</span> <span class="mf">0.48000000000000004</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.52</span><span class="p">,</span> <span class="mf">0.9919999999999998</span><span class="p">,</span> <span class="mf">0.49600000000000005</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.504</span><span class="p">,</span> <span class="mf">0.9983999999999998</span><span class="p">,</span> <span class="mf">0.4992000000000001</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5008</span><span class="p">,</span> <span class="mf">0.99968</span><span class="p">,</span> <span class="mf">0.49984</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5001599999999999</span><span class="p">,</span> <span class="mf">0.9999360000000002</span><span class="p">,</span> <span class="mf">0.4999679999999999</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.500032</span><span class="p">,</span> <span class="mf">0.9999872</span><span class="p">,</span> <span class="mf">0.4999936</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000064</span><span class="p">,</span> <span class="mf">0.9999974400000001</span><span class="p">,</span> <span class="mf">0.49999871999999995</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.50000128</span><span class="p">,</span> <span class="mf">0.999999488</span><span class="p">,</span> <span class="mf">0.4999997439999999</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.500000256</span><span class="p">,</span> <span class="mf">0.9999998976000001</span><span class="p">,</span> <span class="mf">0.49999994880000004</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000512</span><span class="p">,</span> <span class="mf">0.9999999795199999</span><span class="p">,</span> <span class="mf">0.4999999897600001</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.50000001024</span><span class="p">,</span> <span class="mf">0.999999995904</span><span class="p">,</span> <span class="mf">0.499999997952</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.500000002048</span><span class="p">,</span> <span class="mf">0.9999999991808</span><span class="p">,</span> <span class="mf">0.49999999959040003</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000004095999</span><span class="p">,</span> <span class="mf">0.9999999998361601</span><span class="p">,</span> <span class="mf">0.49999999991808003</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.50000000008192</span><span class="p">,</span> <span class="mf">0.9999999999672321</span><span class="p">,</span> <span class="mf">0.49999999998361594</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.500000000016384</span><span class="p">,</span> <span class="mf">0.9999999999934465</span><span class="p">,</span> <span class="mf">0.49999999999672307</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000000032768</span><span class="p">,</span> <span class="mf">0.9999999999986894</span><span class="p">,</span> <span class="mf">0.4999999999993445</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000000006554</span><span class="p">,</span> <span class="mf">0.9999999999997378</span><span class="p">,</span> <span class="mf">0.49999999999986894</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.500000000000131</span><span class="p">,</span> <span class="mf">0.9999999999999478</span><span class="p">,</span> <span class="mf">0.49999999999997374</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000000000262</span><span class="p">,</span> <span class="mf">0.9999999999999897</span><span class="p">,</span> <span class="mf">0.49999999999999467</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000000000052</span><span class="p">,</span> <span class="mf">0.9999999999999979</span><span class="p">,</span> <span class="mf">0.49999999999999895</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000000000011</span><span class="p">,</span> <span class="mf">0.9999999999999994</span><span class="p">,</span> <span class="mf">0.49999999999999983</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5000000000000002</span><span class="p">,</span> <span class="mf">0.9999999999999998</span><span class="p">,</span> <span class="mf">0.5000000000000001</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.49999999999999994</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+<span class="n">Current</span> <span class="n">x</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+<span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Maka dapat diperoleh dari persamaan diatas 
+$$
+x_1 = 0.5 \quad, x_2 = 1 \quad dan \quad x_3 = 0.5
+$$
+Melakukan Pengecekan , misal Pada Persamaan 1 :
+$$
+4x_1 + x_2 + 2x_3 = 4, maka \\
+4(0.5)+ 1 + 2(0.5) = 4 \\
+2 + 1 + 1 = 4 \\
+4 = 4, Terbukti
+$$
+Pada Persamaan 2 :
+$$
+3x_1 + 5x_2 + x_3 = 7, maka \\
+3(0.5)+5 (1)+(0.5) = 7 \\
+1.5 + 5 +0.5 = 7 \\
+7 = 7 ,Terbukti 
+$$</p>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$'],['$','$']]}
+});
+</script>
+
+<p><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Mencari Nilai Akar Dalam Persamaan Aljabar/" title="Tugas 2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tugas 2
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Wahyu Zainur Putra
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Wahyu_Zainur" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/Wahyu_Zainur" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
