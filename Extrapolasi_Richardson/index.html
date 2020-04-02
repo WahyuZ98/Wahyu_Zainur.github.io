@@ -1,0 +1,973 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Repository Untuk Tugas">
+      
+      
+        <link rel="canonical" href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/Extrapolasi_Richardson/">
+      
+      
+        <meta name="author" content="Wahyu Zainur Putra">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Tugas 5 - (180411100128) Wahyu Zainur Putra</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#turunan-numerik" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/" title="(180411100128) Wahyu Zainur Putra" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              (180411100128) Wahyu Zainur Putra
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Tugas 5
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wahyu Zainur Putra
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link">
+          Study Data Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../index_komnum/" class="md-tabs__link md-tabs__link--active">
+          Study Computation Numeric
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://wahyuz98.github.io/Wahyu_Zainur.github.io/" title="(180411100128) Wahyu Zainur Putra" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    (180411100128) Wahyu Zainur Putra
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wahyu Zainur Putra
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Study Data Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Study Data Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Halaman Profile" class="md-nav__link">
+      Halaman Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../statistik deskriptif/" title="Statistik Deskriptif" class="md-nav__link">
+      Statistik Deskriptif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mengukur Jarak Data/" title="Mengukur Jarak Data" class="md-nav__link">
+      Mengukur Jarak Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Missing Values/" title="Missing Values" class="md-nav__link">
+      Missing Values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Decision Tree/" title="Decision Tree" class="md-nav__link">
+      Decision Tree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Clustering/" title="Clustering" class="md-nav__link">
+      Clustering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fuzzy C-Means Clustering/" title="Fuzzy C-Means Clustering" class="md-nav__link">
+      Fuzzy C-Means Clustering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Regresi Linear Berganda/" title="Regresi Linear Berganda" class="md-nav__link">
+      Regresi Linear Berganda
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Study Computation Numeric
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Study Computation Numeric
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index_komnum/" title="Halaman Profile" class="md-nav__link">
+      Halaman Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Error di Dalam Komputasi/" title="Tugas 1" class="md-nav__link">
+      Tugas 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mencari Nilai Akar Dalam Persamaan Aljabar/" title="Tugas 2" class="md-nav__link">
+      Tugas 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Metode Numerik Persamaan Linear/" title="Tugas 3" class="md-nav__link">
+      Tugas 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../INTEGRASI_NUMERIK/" title="Tugas 4" class="md-nav__link">
+      Tugas 4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tugas 5
+      </label>
+    
+    <a href="./" title="Tugas 5" class="md-nav__link md-nav__link--active">
+      Tugas 5
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extrapolasi-richardson" class="md-nav__link">
+    Extrapolasi Richardson
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula-beda-terpusat-central-differense" class="md-nav__link">
+    Formula Beda Terpusat (Central Differense)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabel-richardson-extrapolation" class="md-nav__link">
+    Tabel Richardson Extrapolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-estimasi-pada-f05-dengan-python" class="md-nav__link">
+    Implementasi Estimasi pada $f'(0.5)$ Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extrapolasi-richardson" class="md-nav__link">
+    Extrapolasi Richardson
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula-beda-terpusat-central-differense" class="md-nav__link">
+    Formula Beda Terpusat (Central Differense)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabel-richardson-extrapolation" class="md-nav__link">
+    Tabel Richardson Extrapolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-estimasi-pada-f05-dengan-python" class="md-nav__link">
+    Implementasi Estimasi pada $f'(0.5)$ Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io/edit/master/docs/Extrapolasi_Richardson.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="turunan-numerik"><strong><em>Turunan Numerik</em></strong><a class="headerlink" href="#turunan-numerik" title="Permanent link">&para;</a></h1>
+<h2 id="extrapolasi-richardson"><strong><em>Extrapolasi Richardson</em></strong><a class="headerlink" href="#extrapolasi-richardson" title="Permanent link">&para;</a></h2>
+<h3 id="pengertian">Pengertian<a class="headerlink" href="#pengertian" title="Permanent link">&para;</a></h3>
+<p>Dalam analisis numerik,ekstrapolasi Richardson adalah metode percepatan urutan, yang digunakan untuk meningkatkan laju konvergensi suatu urutan.  Ekstrapolasi Richardson diterapkan pada barisan pendekatan nilai opsi untuk mempercepat laju konvergensinya. </p>
+<p>Aplikasi praktis ekstrapolasi Richardson termasuk integrasi Romberg, yang menerapkan ekstrapolasi Richardson pada aturan trapesium, dan algoritma Bulirsch-Stoer untuk menyelesaikan persamaan diferensial biasa.</p>
+<p>Metode Richardson tidak dapat menghasilkan estimasi untuk kesalahan perkiraan. Salah satu cara untuk memperkirakan kesalahan adalah dengan melakukan dua ekstrapolasi dengan $N $ yang sedikit berbeda dan membandingkan hasilnya.</p>
+<p>Ekstrapolasi Richardson tidak berfungsi untuk urutan berosilasi. Sebagai solusi sederhana, richardson mendeteksi jika tiga elemen terakhir tidak berbeda secara monoton, dan dalam hal itu berlaku ekstrapolasi hanya untuk elemen indeks genap.</p>
+<p><strong>Pada Materi Turunan Numerik Dengan Ekstrapolasi Richardson </strong></p>
+<p>Menggunakan Formula Beda Terpusat (Central Differense). </p>
+<p>Pada Formula beda terpusat ini diharapkan memberikan solusi terbaik. Karena Beda terpusat pendekatannya adalah lebih akurat dari beda maju dan beda mundur karena errornya adalah $O(h^2)$. Setengah urutan langkah h pendekatannya seperempat error dari beda terpusat</p>
+<h3 id="formula-beda-terpusat-central-differense">Formula Beda Terpusat (Central Differense)<a class="headerlink" href="#formula-beda-terpusat-central-differense" title="Permanent link">&para;</a></h3>
+<p>sebagai berikut :
+$$
+f'(x) = {f(x+h) - f(x-h) \over 2h} + O(h^2)
+$$
+Dapat kita ketahui bahwa $E_t = O(h^2)$. Pada $Oh$ disamping biasa disebut sebagai Big Oh Analisis</p>
+<p>Untuk menggunakan formula yang terbaik, bisa dengan formula dibawah ini</p>
+<p>Ditetapkan $f(x)$ dan $x$ tertentu :
+$$
+\varnothing (h) = {f(x+h) - f(x-h) \over 2h} \\
+\varnothing (h) = f'(x) -a_2h^2 - a_4h^4 - a_6h^6 - ... \\
+\varnothing({h \over 2}) = f'(x) -a_2 {h^2 \over 2}-a_4 {h^4 \over 2}-a_6 {h^6 \over 2} - ... \\
+\varnothing(h) - 4\varnothing({h \over 2}) = -3f'(x) - {3 \over 4} a_4h^4 - {15 \over 16} a_6h^6 - ... \\
+\rightarrow f'(x) = {4 \over 3}\varnothing (h/2) - {1 \over 3}\varnothing(h) + O(h^4)
+$$</p>
+<p>Pada Contoh sebuah fungsi sebagai berikut :
+$$
+f(x) = -x^4 - 0.15x^3 - 0.5x^2 - 0.25x + 1.2
+$$
+Dengan $h_1 =0.5$ dan $h_2 = 0.25$. Menghitung estimasi dengan $f'(0.5)$ menggunakan Richardson Extrapolasi</p>
+<p>Nilai sesungguhnya $f'(0.5) = -0.9125$</p>
+<p>Pada Turunan Pertama dapat dihitung dengan beda terpusat (Centered Differences) yaitu:
+$$
+\varnothing(h) ={ f(0.5+h) - f(0.5-h) \over 2h} ,pada \quad x = 0.5 \\
+\varnothing(0.5) = {f(1) -f(0) \over 1} = {0.2 -1.2 \over 1} = -1.0, |ϵ_t|= 9.6 \\
+\varnothing(0.25) = {f(0.75) - f(0.25) \over 0.5} = -0.934375 , |ϵ_t|= 2.4
+$$
+Estimasi dapat diperbaiki dengan menggunakan :
+$$
+f'(0.5) \approx{4 \over 3}Φ(h/2)- {1 \over 3}Φ(h) = {4 \over 3}(-0.934375)-{1 \over 3}(-1) = -0.9125
+$$
+Menghasilkan Nilai Yang sama dengan nilai sesungguhnya maka dapat dikatakan estimasinya sudah tepat</p>
+<h3 id="tabel-richardson-extrapolation">Tabel Richardson Extrapolation<a class="headerlink" href="#tabel-richardson-extrapolation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>D(0,0) = Φ(h)</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D(1,0)=Φ(h/2)</td>
+<td>D(1,1)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D(2,0)=Φ(h/4)</td>
+<td>D(2,1)</td>
+<td>D(2,2)</td>
+<td></td>
+</tr>
+<tr>
+<td>D(8,0)=Φ(h/8)</td>
+<td>D(3,1)</td>
+<td>D(3,2)</td>
+<td>D(3,3)</td>
+</tr>
+</tbody>
+</table>
+<p>Kolom Pertama : $D(n,0) = Φ{h \over 2}$</p>
+<p>yang lain :
+$$
+D(n,m) = {4^m \over 4^m-1} D(n,m-1)- {1 \over 4^m - 1}D(n-1,m-1)
+$$</p>
+<p>Contoh menghitung nilai numerik dari turunan $f(x) = x^{cos(x)}$, menggunakan ekstrapolasi Richardson dengan h = 0.1. Dapatkan D(2,2) sebagai estimasi turunan
+$$
+\varnothing (h) = {f(x+h) - f(x-h) \over 2h} \\
+\varnothing (0.1) = {f(0.7) - f(0.5) \over 0.2} = 1.08483 \\
+\varnothing (0.05) = {f(0.65) - f(0.55) \over 0.1} = 1.08988\\
+\varnothing (0.025) = {f(0.625) - f(0.575) \over 0.05} = 1.09115\\
+D(0,0) = 1.08483, D(1,0)= 1.08988, D(2,0) = 1.09115 \\
+D(n,m) = {4^m \over 4^m-1} D(n,m-1)- {1 \over 4^m - 1}D(n-1,m-1) \\
+D(1,1) = {4 \over 3} D(1,0) - {1 \over 3}D(0,0) = 1.09156\\
+D(2,1) = {4 \over 3} D(2,0) - {1 \over 3}D(1,0) = 1.09157\\
+D(2,2) = {16 \over 15} D(2,1) - {1 \over 15}D(1,1) = 1.09157
+$$
+Maka diperoleh Tabel Richardsonnya , sebagai berikut</p>
+<table>
+<thead>
+<tr>
+<th>1.08483</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.08988</td>
+<td>1.09156</td>
+<td></td>
+</tr>
+<tr>
+<td>1.09115</td>
+<td>1.09157</td>
+<td>1.09157</td>
+</tr>
+</tbody>
+</table>
+<p>Nilai numerik dari turunan $f(x) = x^{cos(x)}$ adalah 1.09157. Ini adalah estimasi terbaik dari turunan dari suatu fungsi</p>
+<h3 id="implementasi-estimasi-pada-f05-dengan-python">Implementasi Estimasi pada $f'(0.5)$ Dengan Python<a class="headerlink" href="#implementasi-estimasi-pada-f05-dengan-python" title="Permanent link">&para;</a></h3>
+<p>Pada Penyelesaian Estimasi pada $f'(0.5)$ menggunakan fungsi sebagai berikut :
+$$
+f(x) = -x^4 - 0.15x^3 - 0.5x^2 - 0.25x + 1.2
+$$
+Mulai dengan $h_1 = 0.5$ dan $h_2 = 0.25$  dengan Richardson Extrapolation</p>
+<p>Berikut Listing Program Penyelesaian Estimasi dengan Metode Richardson Extrapolation</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">def</span> <span class="nf">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span> 
+    <span class="n">Z</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">Z</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Z</span>
+
+<span class="k">def</span> <span class="nf">D</span><span class="p">(</span><span class="n">Func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">h</span><span class="p">):</span>    <span class="c1">#beda terpusat (central differemce) size h , dimana x=a</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">h</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">Richardson_dif</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">):</span> 
+    <span class="sd">&#39;&#39;&#39;Richardson extrapolation method for numerical calculation of first derivative &#39;&#39;&#39;</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">9</span> 
+    <span class="n">L</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">I</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+        <span class="n">L</span><span class="p">[</span><span class="n">I</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">I</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="n">j</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="p">((</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Estimasi , f&#39;(x) = &quot;</span><span class="p">,</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> 
+    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Differensiasi Numerik&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dengan Fungsi f(x) = -0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 dengan x=0.5&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;h1 = 0.5, h2 = 0.5/2=0.25&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
+
+<span class="c1">##print(&#39;diff(2**cos(pi+sin(x)) at x=pi/2 is equal to = %04.20f&#39;%Richardson_dif(lambda x: 2**cos(pi+sin(x)),pi/3))</span>
+</pre></div>
+
+
+<p>Berikut Hasil Output dari Code yang telah dijalankan :</p>
+<div class="codehilite"><pre><span></span><span class="n">Differensiasi</span> <span class="n">Numerik</span>
+<span class="n">Dengan</span> <span class="n">Fungsi</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="n">dengan</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">h2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">/</span><span class="mi">2</span><span class="o">=</span><span class="mf">0.25</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.9125000000000038</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.912500000000005</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.9125000000000053</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.9125000000000053</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.9125000000000053</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.9125000000000053</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.9125000000000053</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  -0.9125000000000053</span>
+<span class="o">-</span><span class="mf">0.91250000000000530687</span>
+</pre></div>
+
+
+<p>Lalu bila dengan fungsi $f(x)$ $diff(2**cos(pi+sin(x))$ dengan $x=pi/3,$ Berikut Hasil Outputnya :</p>
+<div class="codehilite"><pre><span></span><span class="n">Dengan</span> <span class="n">Fungsi</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span><span class="n">diff</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="n">dengan</span> <span class="n">x</span><span class="o">=</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.168495583979535</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.16849558398154443</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.16849558398154296</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.1684955839815426</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.16849558398154252</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.1684955839815425</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.1684955839815425</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  0.1684955839815425</span>
+<span class="n">diff</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="n">at</span> <span class="n">x</span><span class="o">=</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span> <span class="ow">is</span> <span class="n">equal</span> <span class="n">to</span> <span class="o">=</span> <span class="mf">0.16849558398154249050</span>
+</pre></div>
+
+
+<hr />
+<p><strong>Contoh  Implementasi fungsi $f(x) = x^{cos(x)}$ pada x = 0.6</strong></p>
+<p>Menggunakan Ekstrapolasi Richardson dengan h = 0.1</p>
+<p>Berikut Listing Program Penyelesaian Estimasi dengan Metode Richardson Extrapolation</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">def</span> <span class="nf">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span> 
+    <span class="n">Z</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">Z</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Z</span>
+
+<span class="k">def</span> <span class="nf">D</span><span class="p">(</span><span class="n">Func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">h</span><span class="p">):</span>    <span class="c1">#beda terpusat (central differemce) size h , dimana x=a</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">h</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">Richardson_dif</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">):</span> 
+    <span class="sd">&#39;&#39;&#39;Richardson extrapolation method for numerical calculation of first derivative &#39;&#39;&#39;</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">9</span> 
+    <span class="n">L</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">I</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+        <span class="n">L</span><span class="p">[</span><span class="n">I</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">I</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="n">j</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="p">((</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Estimasi , f&#39;(x) = &quot;</span><span class="p">,</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> 
+    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Differensiasi Numerik&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dengan Fungsi f(x) = x^cos(x), dengan x=0.6&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">,</span><span class="mf">0.6</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Berikut Hasil Outputnya :</p>
+<div class="codehilite"><pre><span></span><span class="n">Differensiasi</span> <span class="n">Numerik</span>
+<span class="n">Dengan</span> <span class="n">Fungsi</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">dengan</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.6</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092680076</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092884377</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092884381</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092884381</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092884381</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092884381</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092884381</span>
+<span class="n">Estimasi</span> <span class="p">,</span> <span class="n">f</span><span class="s1">&#39;(x) =  1.0915707092884381</span>
+<span class="mf">1.09157070928843813462</span>
+</pre></div>
+
+
+<p>Dapat kita ketahui Nilai numerik dari turunan $f(x) = x^{cos(x)}$ adalah 1.09157. Sama dengan menggunakan cara manual menghitunya pada Contoh diatas.</p>
+<p>Sekian TerimaKasih ;</p>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$'],['$','$']]}
+});
+</script>
+
+<p><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../INTEGRASI_NUMERIK/" title="Tugas 4" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tugas 4
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Wahyu Zainur Putra
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/WahyuZ98/Wahyu_Zainur.github.io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Wahyu_Zainur" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/Wahyu_Zainur" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
